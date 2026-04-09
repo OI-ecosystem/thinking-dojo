@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Thinking Dojo</title>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system,'Helvetica Neue',Arial,sans-serif; background:#fff; color:#1A1A18; line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased; }
+  .page { max-width:860px; margin:0 auto; padding:0 40px 80px; }
+  @media(max-width:600px){ .page{padding:0 22px 60px;} }
+  .belt-strip { display:flex; height:5px; width:100%; }
+  .belt-strip span { flex:1; }
+  .page-header { padding:52px 0 40px; border-bottom:1px solid #E8E8E4; margin-bottom:48px; }
+  .page-header h1 { font-size:42px; font-weight:700; letter-spacing:-.02em; margin-bottom:10px; line-height:1.15; }
+  .page-header .tagline { font-size:18px; font-style:italic; color:#888884; margin-bottom:6px; }
+  .page-header .origin { font-size:14px; color:#AAAAAA; }
+  .section { margin-bottom:52px; padding-bottom:52px; border-bottom:1px solid #E8E8E4; }
+  .section-label { font-size:10px; font-weight:700; letter-spacing:.20em; text-transform:uppercase; color:#AAAAAA; margin-bottom:18px; }
+  h2 { font-size:26px; font-weight:700; letter-spacing:-.01em; margin-bottom:10px; line-height:1.25; }
+  h3 { font-size:16px; font-weight:600; margin-bottom:5px; margin-top:24px; }
+  p { color:#555550; margin-bottom:14px; font-size:15.5px; line-height:1.75; }
+  ul { list-style:none; margin:10px 0 18px; padding:0; }
+  ul li { color:#555550; font-size:15.5px; padding:5px 0 5px 20px; position:relative; line-height:1.6; }
+  ul li::before { content:'·'; position:absolute; left:6px; color:#AAAAAA; font-size:18px; line-height:1.4; }
+  .cta-link { display:inline-block; margin-top:16px; font-size:14px; font-weight:600; letter-spacing:.04em; color:#1A1A18; text-decoration:none; border-bottom:2px solid #1A1A18; padding-bottom:2px; transition:opacity .2s; }
+  .cta-link:hover { opacity:.5; }
+  .flow-bar { background:#F7F7F4; border-radius:8px; padding:20px 28px; text-align:center; font-size:16px; font-weight:600; color:#1A1A18; margin:20px 0; letter-spacing:.01em; }
+  .belt-progression { display:flex; flex-direction:column; gap:3px; margin:20px 0; }
+  .belt-row { display:flex; align-items:center; gap:14px; padding:10px 16px; border-radius:6px; }
+  .belt-dot { width:13px; height:13px; border-radius:50%; flex-shrink:0; }
+  .belt-name { font-size:13px; font-weight:600; width:88px; flex-shrink:0; }
+  .belt-desc { font-size:13px; color:#555550; }
+  .tier-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px; }
+  @media(max-width:560px){ .tier-grid{grid-template-columns:1fr;} }
+  .tier-card { background:#F7F7F4; border:1px solid #E8E8E4; border-radius:8px; padding:20px 20px; }
+  .tier-price { font-size:22px; font-weight:700; margin-bottom:3px; }
+  .tier-name { font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#888884; margin-bottom:10px; }
+  .tier-card p { font-size:13px; color:#555550; margin:0; line-height:1.65; }
+  .principles { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; }
+  @media(max-width:500px){ .principles{grid-template-columns:1fr;} }
+  .principle { background:#F7F7F4; border-radius:6px; padding:12px 16px; font-size:13.5px; color:#555550; font-weight:500; }
+  .callout { border-left:3px solid #1A1A18; background:#F7F7F4; padding:18px 22px; border-radius:0 8px 8px 0; margin:24px 0; }
+  .callout p { margin:0; font-style:italic; color:#1A1A18; font-size:15px; }
+  .quote { text-align:center; font-style:italic; font-size:18px; color:#1A1A18; padding:36px 40px; border-top:1px solid #E8E8E4; border-bottom:1px solid #E8E8E4; margin:48px 0 40px; line-height:1.85; }
+  .page-footer { margin-top:48px; padding-top:28px; border-top:1px solid #E8E8E4; text-align:center; }
+  .page-footer p { font-size:11px; color:#AAAAAA; letter-spacing:.10em; text-transform:uppercase; margin-bottom:18px; }
+</style>
+</head>
+<body>
+
+<div class="belt-strip">
+  <span style="background:#DCDCDC"></span><span style="background:#EFC84A"></span>
+  <span style="background:#E07E2A"></span><span style="background:#5FA348"></span>
+  <span style="background:#3E76BB"></span><span style="background:#7A5230"></span>
+  <span style="background:#252525"></span>
+</div>
+
+<div class="page">
+
+  <div class="page-header">
+    <h1>The Thinking Dojo</h1>
+    <p class="tagline">A structured system that teaches children how to think.</p>
+    <p class="origin">Not what to think — but how to process, decide, and act. &nbsp;·&nbsp; Ages 7–13</p>
+  </div>
+
+  <!-- WHAT IT IS -->
+  <div class="section">
+    <div class="section-label">What It Is</div>
+    <h2>Structured thinking for children.</h2>
+    <p>Most systems teach children what to think. Very few teach them how to think.</p>
+    <p>The Thinking Dojo is a calm, structured progression system. Children move through seven belt levels — each one developing a specific thinking skill.</p>
+    <p>No scores. No tests. No pressure. Just clear, structured thinking — built step by step.</p>
+    <div class="flow-bar">Notice &nbsp;→&nbsp; Pattern &nbsp;→&nbsp; Choice &nbsp;→&nbsp; Plan &nbsp;→&nbsp; Act &nbsp;→&nbsp; Review &nbsp;→&nbsp; Independent Thinking</div>
+  </div>
+
+  <!-- SEVEN LEVELS -->
+  <div class="section">
+    <div class="section-label">The Seven Levels</div>
+    <h2>Colour is Clarity.</h2>
+    <p>Each belt develops one specific thinking skill. Children progress naturally at their own pace.</p>
+    <div class="belt-progression">
+      <div class="belt-row" style="background:#F4F4F1"><div class="belt-dot" style="background:#DCDCDC;outline:1px solid #ccc"></div><div class="belt-name">White</div><div class="belt-desc">Notice — see what is happening clearly</div></div>
+      <div class="belt-row" style="background:#FEFAEE"><div class="belt-dot" style="background:#EFC84A"></div><div class="belt-name">Yellow</div><div class="belt-desc">Pattern — recognise what repeats</div></div>
+      <div class="belt-row" style="background:#FEF6EE"><div class="belt-dot" style="background:#E07E2A"></div><div class="belt-name">Orange</div><div class="belt-desc">Choice — understand your options</div></div>
+      <div class="belt-row" style="background:#F0F8EE"><div class="belt-dot" style="background:#5FA348"></div><div class="belt-name">Green</div><div class="belt-desc">Plan — think ahead clearly</div></div>
+      <div class="belt-row" style="background:#EEF4FC"><div class="belt-dot" style="background:#3E76BB"></div><div class="belt-name">Blue</div><div class="belt-desc">Act — turn thinking into action</div></div>
+      <div class="belt-row" style="background:#F5EEE8"><div class="belt-dot" style="background:#7A5230"></div><div class="belt-name">Brown</div><div class="belt-desc">Review — learn from outcomes</div></div>
+      <div class="belt-row" style="background:#F0F0EE"><div class="belt-dot" style="background:#252525"></div><div class="belt-name">Black</div><div class="belt-desc">Independent Thinker — think without being told</div></div>
+    </div>
+  </div>
+
+  <!-- WHAT CHILDREN DEVELOP -->
+  <div class="section">
+    <div class="section-label">What Children Develop</div>
+    <h2>Real skills. Real situations.</h2>
+    <p>The Thinking Dojo develops thinking through everyday situations — not worksheets or tests.</p>
+    <ul>
+      <li>Notice what matters in any situation</li>
+      <li>Recognise patterns in what happens around them</li>
+      <li>Think through options before deciding</li>
+      <li>Plan with clear steps</li>
+      <li>Act with intention and follow through</li>
+      <li>Review what happened and learn from it</li>
+      <li>Think independently — without being guided</li>
+    </ul>
+    <div class="principles">
+      <div class="principle">No pressure</div>
+      <div class="principle">No scores</div>
+      <div class="principle">No right answers</div>
+      <div class="principle">No testing</div>
+    </div>
+  </div>
+
+  <!-- THE SYSTEM -->
+  <div class="section">
+    <div class="section-label">The System</div>
+    <h2>Three formats. One framework.</h2>
+    <p>The Thinking Dojo is available as physical materials, a story series, and a digital coaching engine — all built around the same seven-level framework.</p>
+    <h3>Story Series</h3>
+    <p>Seven short stories — one per belt level. Each story follows Kai and Tana through real-world situations that develop one specific thinking skill.</p>
+    <h3>Thinking Cards</h3>
+    <p>Printable card sets by belt level. One card. One situation. One question. Use in real life, every day.</p>
+    <h3>The Coach Engine</h3>
+    <p>A digital coaching system. Seven belt levels. Six guided questions per level. The screen changes colour as the child progresses. Works on iPhone, iPad, and desktop. Licensed. Private. Yours.</p>
+    <ul>
+      <li>Visual learning through the belt colour system</li>
+      <li>Guided decision-making at every level</li>
+      <li>Progress tracked through the Coach Engine</li>
+    </ul>
+  </div>
+
+  <!-- GET THE SYSTEM -->
+  <div class="section">
+    <div class="section-label">Get the System</div>
+    <h2>Four entry points.</h2>
+    <p>Start where it makes sense. Each tier includes everything from the one before it.</p>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-price">£9.99</div>
+        <div class="tier-name">Workbook</div>
+        <p>The core workbook. Seven belt levels. Available on Amazon KDP.</p>
+      </div>
+      <div class="tier-card">
+        <div class="tier-price">£24.99</div>
+        <div class="tier-name">Starter System</div>
+        <p>Workbook · Story Series · Thinking Cards · Progress Tracker · Thinking Chart</p>
+      </div>
+      <div class="tier-card">
+        <div class="tier-price">£44.99</div>
+        <div class="tier-name">Complete System</div>
+        <p>Everything in Starter · Plus Parent Guide · Plus Premium Thinking Cards</p>
+      </div>
+      <div class="tier-card">
+        <div class="tier-price">£64.99</div>
+        <div class="tier-name">Coach Engine</div>
+        <p>Digital coaching system · Licensed · Seven belt levels · All devices</p>
+      </div>
+    </div>
+    <a class="cta-link" href="https://opportunity-intelligence.lemonsqueezy.com/">→ Get the Thinking Dojo System</a>
+  </div>
+
+  <!-- ORIGIN -->
+  <div class="section">
+    <div class="section-label">Origin</div>
+    <h2>Where this came from.</h2>
+    <p>The Thinking Dojo is the earliest expression of the Opportunity Intelligence framework — a structured thinking system developed inside live strategic environments where signal matters and noise is costly.</p>
+    <p>The same cognitive framework that underpins institutional decision-making — adapted for children aged 7–13.</p>
+    <p>Same architecture. Different scale. Same outcome: clear, independent thinking.</p>
+    <div class="callout">
+      <p>This system is not theoretical. It was developed inside live M&amp;A environments where signal matters and noise is costly.</p>
+    </div>
+  </div>
+
+  <div class="quote">
+    "Thinking is not something children are taught.<br>
+    It is something they develop.<br>
+    The Thinking Dojo simply gives it structure."
+  </div>
+
+  <div class="page-footer">
+    <p>Part of the Opportunity Intelligence Ecosystem</p>
+    <div class="belt-strip" style="border-radius:3px;overflow:hidden">
+      <span style="background:#DCDCDC"></span><span style="background:#EFC84A"></span>
+      <span style="background:#E07E2A"></span><span style="background:#5FA348"></span>
+      <span style="background:#3E76BB"></span><span style="background:#7A5230"></span>
+      <span style="background:#252525"></span>
+    </div>
+  </div>
+
+</div>
+
+<div class="belt-strip">
+  <span style="background:#DCDCDC"></span><span style="background:#EFC84A"></span>
+  <span style="background:#E07E2A"></span><span style="background:#5FA348"></span>
+  <span style="background:#3E76BB"></span><span style="background:#7A5230"></span>
+  <span style="background:#252525"></span>
+</div>
+
+</body>
+</html>
