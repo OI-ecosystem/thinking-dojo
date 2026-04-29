@@ -40,6 +40,31 @@
   .principles { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; }
   @media(max-width:500px){ .principles{grid-template-columns:1fr;} }
   .principle { background:#F7F7F4; border-radius:6px; padding:12px 16px; font-size:13.5px; color:#555550; font-weight:500; }
+
+  /* ── Card showcase ── */
+  .card-intro { font-size:15px; color:#555550; margin-bottom:24px; line-height:1.75; }
+  .card-belt-block { margin-bottom:36px; }
+  .card-belt-label { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .card-belt-label .dot { width:11px; height:11px; border-radius:50%; flex-shrink:0; }
+  .card-belt-label .name { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#888884; }
+  .card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  @media(max-width:600px){ .card-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:380px){ .card-grid{grid-template-columns:1fr;} }
+  .think-card { border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.08); background:#fff; display:flex; flex-direction:column; }
+  .think-card-header { padding:9px 14px 8px; display:flex; flex-direction:column; gap:2px; }
+  .think-card-belt { font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; opacity:.9; }
+  .think-card-label { font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; opacity:.7; }
+  .think-card-body { flex:1; padding:16px 14px 12px; display:flex; flex-direction:column; justify-content:center; }
+  .think-card-q { font-size:15px; font-weight:700; color:#1A1A18; line-height:1.4; margin-bottom:10px; font-family:Georgia,'Times New Roman',serif; }
+  .think-card-brand { font-size:10px; color:#AAAAAA; font-weight:600; letter-spacing:.06em; border-top:1px solid #EEEEEC; padding-top:8px; margin-top:auto; }
+
+  /* ── How it works steps ── */
+  .how-steps { display:flex; flex-direction:column; gap:0; margin:24px 0; }
+  .how-step { display:flex; gap:20px; padding:18px 0; border-bottom:1px solid #EEEEEC; }
+  .how-step:last-child { border-bottom:none; }
+  .how-step-num { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0; margin-top:2px; }
+  .how-step-content h4 { font-size:15px; font-weight:700; margin-bottom:4px; color:#1A1A18; }
+  .how-step-content p { font-size:14px; color:#555550; margin:0; line-height:1.65; }
   .callout { border-left:3px solid #1A1A18; background:#F7F7F4; padding:18px 22px; border-radius:0 8px 8px 0; margin:24px 0; }
   .callout p { margin:0; font-style:italic; color:#1A1A18; font-size:15px; }
   .quote { text-align:center; font-style:italic; font-size:18px; color:#1A1A18; padding:36px 40px; border-top:1px solid #E8E8E4; border-bottom:1px solid #E8E8E4; margin:48px 0 40px; line-height:1.85; }
@@ -112,21 +137,225 @@
     </div>
   </div>
 
+  <!-- THINKING CARDS SHOWCASE -->
+  <div class="section">
+    <div class="section-label">The Thinking Cards</div>
+    <h2>One card. One question. One moment.</h2>
+    <p class="card-intro">Each belt level comes with a set of prompt cards. One question per card. Used in real situations — at home, at the table, in the car. No worksheet. No test. Just a question that opens up thinking at exactly the right level for where your child is now.</p>
+
+    <!-- White -->
+    <div class="card-belt-block">
+      <div class="card-belt-label">
+        <div class="dot" style="background:#DCDCDC;outline:1px solid #ccc"></div>
+        <div class="name">White Belt — Notice</div>
+      </div>
+      <div class="card-grid">
+        <div class="think-card">
+          <div class="think-card-header" style="background:#E8E8E5">
+            <div class="think-card-belt" style="color:#555">White Belt</div>
+            <div class="think-card-label" style="color:#777">Notice</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What did you notice today?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#E8E8E5">
+            <div class="think-card-belt" style="color:#555">White Belt</div>
+            <div class="think-card-label" style="color:#777">Notice</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What might others have missed?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#E8E8E5">
+            <div class="think-card-belt" style="color:#555">White Belt</div>
+            <div class="think-card-label" style="color:#777">Notice</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What has changed since yesterday?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orange -->
+    <div class="card-belt-block">
+      <div class="card-belt-label">
+        <div class="dot" style="background:#E07E2A"></div>
+        <div class="name">Orange Belt — Choice</div>
+      </div>
+      <div class="card-grid">
+        <div class="think-card">
+          <div class="think-card-header" style="background:#E07E2A">
+            <div class="think-card-belt" style="color:#fff">Orange Belt</div>
+            <div class="think-card-label" style="color:#ffe5cc">Choice</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What could you do?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#E07E2A">
+            <div class="think-card-belt" style="color:#fff">Orange Belt</div>
+            <div class="think-card-label" style="color:#ffe5cc">Choice</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What might happen if you choose this?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#E07E2A">
+            <div class="think-card-belt" style="color:#fff">Orange Belt</div>
+            <div class="think-card-label" style="color:#ffe5cc">Choice</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What could go wrong?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Green -->
+    <div class="card-belt-block">
+      <div class="card-belt-label">
+        <div class="dot" style="background:#5FA348"></div>
+        <div class="name">Green Belt — Plan</div>
+      </div>
+      <div class="card-grid">
+        <div class="think-card">
+          <div class="think-card-header" style="background:#5FA348">
+            <div class="think-card-belt" style="color:#fff">Green Belt</div>
+            <div class="think-card-label" style="color:#d4edcc">Plan</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What do you do first?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#5FA348">
+            <div class="think-card-belt" style="color:#fff">Green Belt</div>
+            <div class="think-card-label" style="color:#d4edcc">Plan</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What are the steps?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#5FA348">
+            <div class="think-card-belt" style="color:#fff">Green Belt</div>
+            <div class="think-card-label" style="color:#d4edcc">Plan</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What is your goal?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blue -->
+    <div class="card-belt-block" style="margin-bottom:0">
+      <div class="card-belt-label">
+        <div class="dot" style="background:#3E76BB"></div>
+        <div class="name">Blue Belt — Act</div>
+      </div>
+      <div class="card-grid">
+        <div class="think-card">
+          <div class="think-card-header" style="background:#3E76BB">
+            <div class="think-card-belt" style="color:#fff">Blue Belt</div>
+            <div class="think-card-label" style="color:#ccddee">Act</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What will you do now?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#3E76BB">
+            <div class="think-card-belt" style="color:#fff">Blue Belt</div>
+            <div class="think-card-label" style="color:#ccddee">Act</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">What is one small step?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+        <div class="think-card">
+          <div class="think-card-header" style="background:#3E76BB">
+            <div class="think-card-belt" style="color:#fff">Blue Belt</div>
+            <div class="think-card-label" style="color:#ccddee">Act</div>
+          </div>
+          <div class="think-card-body">
+            <div class="think-card-q">Did you complete it?</div>
+            <div class="think-card-brand">The Thinking Dojo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <div class="section-label">How It Works</div>
+    <h2>A process, not a test.</h2>
+    <p class="card-intro">The Thinking Dojo is designed to be used in real moments — not in a classroom, not as homework. A card pulled at dinner. A question asked after a difficult situation. A session on the Coach Engine before bed. The thinking happens in life, not about life.</p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num" style="background:#DCDCDC;color:#555">1</div>
+        <div class="how-step-content">
+          <h4>Identify where your child is now</h4>
+          <p>Use the Thinking Progress Chart to observe — not test — your child's natural thinking. Which belt level best describes how they currently approach situations? There is no wrong answer.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num" style="background:#EFC84A;color:#fff">2</div>
+        <div class="how-step-content">
+          <h4>Use the cards in everyday moments</h4>
+          <p>Pull one card from the relevant belt pack. Ask the question naturally — at the table, in the car, after something happened. One question. Let them think. Don't correct. Don't guide. Just listen.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num" style="background:#E07E2A;color:#fff">3</div>
+        <div class="how-step-content">
+          <h4>Use the Coach Engine for guided sessions</h4>
+          <p>When your child is ready for a structured session, open the Coach Engine. Six guided questions per belt level. The screen changes colour as they progress. Private and licensed — their responses belong to them.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num" style="background:#5FA348;color:#fff">4</div>
+        <div class="how-step-content">
+          <h4>Progress naturally — no pressure</h4>
+          <p>When you notice your child thinking at the next level naturally and consistently, move them up. Progress is observational. There is no test, no pass mark, no timeline. Every child moves at their own pace.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- THE SYSTEM -->
   <div class="section">
     <div class="section-label">The System</div>
     <h2>Three formats. One framework.</h2>
-    <p>The Thinking Dojo is available as physical materials, a story series, and a digital coaching engine — all built around the same seven-level framework.</p>
-    <h3>Story Series</h3>
-    <p>Seven short stories — one per belt level. Each story follows Kai and Tana through real-world situations that develop one specific thinking skill.</p>
+    <p>The Thinking Dojo is available as physical materials, a story series, and a digital coaching engine — all built around the same seven-level framework. Each format works independently. Together they create a complete thinking environment.</p>
     <h3>Thinking Cards</h3>
-    <p>Printable card sets by belt level. One card. One situation. One question. Use in real life, every day.</p>
+    <p>Printable card sets by belt level. Seven packs — one per belt. Each card carries a single question designed to activate the specific thinking skill for that level. Print, cut, and use in any real moment. No setup. No screen.</p>
+    <h3>Story Series</h3>
+    <p>Seven short stories — one per belt level. Each story follows Kai and Tana through a real-world situation that requires the thinking skill of that belt. Children read the situation, see the thinking in action, and recognise the skill in their own life.</p>
     <h3>The Coach Engine</h3>
-    <p>A digital coaching system. Seven belt levels. Six guided questions per level. The screen changes colour as the child progresses. Works on iPhone, iPad, and desktop. Licensed. Private. Yours.</p>
+    <p>A digital coaching system that guides a child through their current belt level with six structured questions per session. The screen changes colour to match the active belt. Sessions are private and licensed — responses belong to the child, not a platform. Works on iPhone, iPad, and desktop without an app download.</p>
     <ul>
-      <li>Visual learning through the belt colour system</li>
-      <li>Guided decision-making at every level</li>
-      <li>Progress tracked through the Coach Engine</li>
+      <li>Colour-progressive interface — each belt has its own visual environment</li>
+      <li>Six guided questions per level — structured but never prescriptive</li>
+      <li>Licensed access — one purchase, permanent use, all devices</li>
     </ul>
   </div>
 
