@@ -1,432 +1,676 @@
+<!-- v2.2 · 2026-09-28 · removed closing subline · whole plan cards clickable · Thinking Dojo landing page redesign (colour, imagery, video, direct checkouts) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta name="google-site-verification" content="rGVIM4L2ado81qPPl2xziGn8kaQTCndGel5rpg4LOGw" />
+<meta name="google-site-verification" content="rGVIM4L2ado81qPPl2xziGn8kaQTCndGel5rpg4LOGw" />
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>The Thinking Dojo</title>
+<meta name="description" content="The Thinking Dojo teaches children aged 7–13 how to think. Seven coloured belts, printable thinking cards, stories and a guided Coach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,50&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system,'Helvetica Neue',Arial,sans-serif; background:#fff; color:#1A1A18; line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased; }
-  .page { max-width:860px; margin:0 auto; padding:0 40px 80px; }
-  @media(max-width:600px){ .page{padding:0 22px 60px;} }
-  .belt-strip { display:flex; height:5px; width:100%; }
-  .belt-strip span { flex:1; }
-  .page-header { padding:52px 0 40px; border-bottom:1px solid #E8E8E4; margin-bottom:48px; }
-  .page-header h1 { font-size:42px; font-weight:700; letter-spacing:-.02em; margin-bottom:10px; line-height:1.15; }
-  .page-header .tagline { font-size:18px; font-style:italic; color:#888884; margin-bottom:6px; }
-  .page-header .origin { font-size:14px; color:#AAAAAA; }
-  .section { margin-bottom:52px; padding-bottom:52px; border-bottom:1px solid #E8E8E4; }
-  .section-label { font-size:10px; font-weight:700; letter-spacing:.20em; text-transform:uppercase; color:#AAAAAA; margin-bottom:18px; }
-  h2 { font-size:26px; font-weight:700; letter-spacing:-.01em; margin-bottom:10px; line-height:1.25; }
-  h3 { font-size:16px; font-weight:600; margin-bottom:5px; margin-top:24px; }
-  p { color:#555550; margin-bottom:14px; font-size:15.5px; line-height:1.75; }
-  ul { list-style:none; margin:10px 0 18px; padding:0; }
-  ul li { color:#555550; font-size:15.5px; padding:5px 0 5px 20px; position:relative; line-height:1.6; }
-  ul li::before { content:'·'; position:absolute; left:6px; color:#AAAAAA; font-size:18px; line-height:1.4; }
-  .cta-link { display:inline-block; margin-top:16px; font-size:14px; font-weight:600; letter-spacing:.04em; color:#1A1A18; text-decoration:none; border-bottom:2px solid #1A1A18; padding-bottom:2px; transition:opacity .2s; }
-  .cta-link:hover { opacity:.5; }
-  .flow-bar { background:#F7F7F4; border-radius:8px; padding:20px 28px; text-align:center; font-size:16px; font-weight:600; color:#1A1A18; margin:20px 0; letter-spacing:.01em; }
-  .belt-progression { display:flex; flex-direction:column; gap:3px; margin:20px 0; }
-  .belt-row { display:flex; align-items:center; gap:14px; padding:10px 16px; border-radius:6px; }
-  .belt-dot { width:13px; height:13px; border-radius:50%; flex-shrink:0; }
-  .belt-name { font-size:13px; font-weight:600; width:88px; flex-shrink:0; }
-  .belt-desc { font-size:13px; color:#555550; }
-  .tier-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px; }
-  @media(max-width:560px){ .tier-grid{grid-template-columns:1fr;} }
-  .tier-card { background:#F7F7F4; border:1px solid #E8E8E4; border-radius:8px; padding:20px 20px; }
-  .tier-price { font-size:22px; font-weight:700; margin-bottom:3px; }
-  .tier-name { font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#888884; margin-bottom:10px; }
-  .tier-card p { font-size:13px; color:#555550; margin:0; line-height:1.65; }
-  .principles { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; }
-  @media(max-width:500px){ .principles{grid-template-columns:1fr;} }
-  .principle { background:#F7F7F4; border-radius:6px; padding:12px 16px; font-size:13.5px; color:#555550; font-weight:500; }
+  :root {
+    color-scheme: light;
+    --paper: #FBF7EE;
+    --paper-2: #F4EEE1;
+    --card: #FFFFFF;
+    --ink: #1B1D24;
+    --ink-2: #3D3F47;
+    --ink-3: #5E6068;
+    --line: #E4DCCB;
+    --navy: #1F2B40;
+    --navy-hi: #2C3B57;
+    --white-belt: #DCDCDC;
+    --yellow: #EFC84A;
+    --orange: #E07E2A;
+    --green: #5FA348;
+    --blue: #3E76BB;
+    --brown: #7A5230;
+    --black: #252525;
+    --coach-bg: #FEF9EA;
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "Figtree", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --wrap: 1120px;
+    --gutter: clamp(18px, 4vw, 40px);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--body); font-size: 17px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, video { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--display); font-variation-settings: "SOFT" 50; font-weight: 600; line-height: 1.1; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); }
+  .lede { font-size: 19px; color: var(--ink-2); max-width: 36em; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
 
-  /* ── Card showcase ── */
-  .card-intro { font-size:15px; color:#555550; margin-bottom:24px; line-height:1.75; }
-  .card-belt-block { margin-bottom:36px; }
-  .card-belt-label { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
-  .card-belt-label .dot { width:11px; height:11px; border-radius:50%; flex-shrink:0; }
-  .card-belt-label .name { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#888884; }
-  .card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-  @media(max-width:600px){ .card-grid{grid-template-columns:repeat(2,1fr);} }
-  @media(max-width:380px){ .card-grid{grid-template-columns:1fr;} }
-  .think-card { border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.08); background:#fff; display:flex; flex-direction:column; }
-  .think-card-header { padding:9px 14px 8px; display:flex; flex-direction:column; gap:2px; }
-  .think-card-belt { font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; opacity:.9; }
-  .think-card-label { font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; opacity:.7; }
-  .think-card-body { flex:1; padding:16px 14px 12px; display:flex; flex-direction:column; justify-content:center; }
-  .think-card-q { font-size:15px; font-weight:700; color:#1A1A18; line-height:1.4; margin-bottom:10px; font-family:Georgia,'Times New Roman',serif; }
-  .think-card-brand { font-size:10px; color:#AAAAAA; font-weight:600; letter-spacing:.06em; border-top:1px solid #EEEEEC; padding-top:8px; margin-top:auto; }
+  /* belt strip */
+  .strip { display: flex; height: 6px; }
+  .strip span { flex: 1; }
+  .strip .s1 { background: var(--white-belt); } .strip .s2 { background: var(--yellow); }
+  .strip .s3 { background: var(--orange); } .strip .s4 { background: var(--green); }
+  .strip .s5 { background: var(--blue); } .strip .s6 { background: var(--brown); }
+  .strip .s7 { background: var(--black); }
 
-  /* ── How it works steps ── */
-  .how-steps { display:flex; flex-direction:column; gap:0; margin:24px 0; }
-  .how-step { display:flex; gap:20px; padding:18px 0; border-bottom:1px solid #EEEEEC; }
-  .how-step:last-child { border-bottom:none; }
-  .how-step-num { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0; margin-top:2px; }
-  .how-step-content h4 { font-size:15px; font-weight:700; margin-bottom:4px; color:#1A1A18; }
-  .how-step-content p { font-size:14px; color:#555550; margin:0; line-height:1.65; }
-  .callout { border-left:3px solid #1A1A18; background:#F7F7F4; padding:18px 22px; border-radius:0 8px 8px 0; margin:24px 0; }
-  .callout p { margin:0; font-style:italic; color:#1A1A18; font-size:15px; }
-  .quote { text-align:center; font-style:italic; font-size:18px; color:#1A1A18; padding:36px 40px; border-top:1px solid #E8E8E4; border-bottom:1px solid #E8E8E4; margin:48px 0 40px; line-height:1.85; }
-  .page-footer { margin-top:48px; padding-top:28px; border-top:1px solid #E8E8E4; text-align:center; }
-  .page-footer p { font-size:11px; color:#AAAAAA; letter-spacing:.10em; text-transform:uppercase; margin-bottom:18px; }
+  /* buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; font-family: var(--body); font-size: 16px; font-weight: 700; text-decoration: none; letter-spacing: .01em; cursor: pointer; border: 2px solid transparent; transition: transform .15s ease, background .15s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--navy); color: #fff; }
+  .btn-primary:hover { background: var(--navy-hi); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-ghost:hover { background: rgba(27,29,36,.06); }
+
+  /* top bar */
+  .topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(251,247,238,.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .wordmark { font-family: var(--display); font-weight: 600; font-size: 21px; text-decoration: none; letter-spacing: -.01em; }
+  .topbar-right { display: flex; align-items: center; gap: 18px; }
+  .topbar-age { font-size: 14px; color: var(--ink-3); font-weight: 600; }
+  .topbar .btn { min-height: 42px; padding: 0 18px; font-size: 15px; }
+  @media (max-width: 560px) { .topbar-age { display: none; } }
+
+  /* hero */
+  .hero { background: linear-gradient(180deg, #FBEFD6 0%, var(--paper) 78%); padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 96px); overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+  .hero h1 { font-size: clamp(42px, 6.2vw, 76px); margin-top: 18px; }
+  .hero h1 em { font-style: italic; font-weight: 500; }
+  .hero .lede { margin-top: 22px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .promise { display: flex; flex-wrap: wrap; gap: 8px 10px; margin-top: 30px; padding: 0; list-style: none; }
+  .promise li { font-size: 14.5px; font-weight: 600; color: var(--ink-2); background: rgba(255,255,255,.7); border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px; }
+  .hero-visual { position: relative; justify-self: center; width: min(100%, 440px); }
+  .hero-poster { border-radius: 18px; box-shadow: 0 30px 60px -24px rgba(60,40,10,.45), 0 0 0 1px rgba(0,0,0,.04); transform: rotate(1.5deg); }
+  .hero-card { position: absolute; left: -38px; bottom: 44px; width: 190px; transform: rotate(-6deg); }
+  @media (max-width: 880px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr); }
+    .hero-visual { width: min(100%, 380px); }
+    .hero-card { left: -12px; width: 160px; }
+  }
+
+  /* printed card replica */
+  .tcard { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 12px 28px -12px rgba(0,0,0,.28), 0 0 0 1px rgba(0,0,0,.05); display: flex; flex-direction: column; }
+  .tcard-head { padding: 9px 14px; font-size: 13px; font-weight: 700; letter-spacing: .02em; }
+  .tcard-q { font-family: var(--display); font-size: 21px; line-height: 1.25; padding: 20px 16px 14px; flex: 1; font-weight: 500; }
+  .tcard-foot { font-size: 11.5px; color: var(--ink-3); padding: 0 16px 12px; }
+  .h-white { background: #E8E8E5; color: var(--ink); } .h-yellow { background: var(--yellow); color: var(--ink); }
+  .h-orange { background: var(--orange); color: var(--ink); } .h-green { background: var(--green); color: var(--ink); }
+  .h-blue { background: var(--blue); color: #fff; } .h-brown { background: var(--brown); color: #fff; }
+  .h-black { background: var(--black); color: #fff; }
+
+  /* section rhythm */
+  .section { padding-block: clamp(64px, 9vw, 112px); }
+  .section-head { display: grid; gap: 16px; max-width: 760px; margin-bottom: clamp(32px, 5vw, 52px); }
+  .section-head h2 { font-size: clamp(34px, 4.6vw, 54px); }
+
+  /* problem band */
+  .problem { background: var(--navy); color: #fff; }
+  .problem-inner { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; padding-block: clamp(56px, 8vw, 96px); }
+  .problem h2 { font-size: clamp(32px, 4.4vw, 52px); }
+  .problem p { font-size: 18.5px; color: #D9DEE8; }
+  .problem p + p { margin-top: 14px; }
+  .problem strong { color: #fff; }
+  @media (max-width: 760px) { .problem-inner { grid-template-columns: 1fr; } }
+
+  /* belt staircase */
+  .stairs { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; align-items: end; padding: 0; margin: 0; list-style: none; }
+  .step { appearance: none; border: 0; background: none; padding: 0; cursor: pointer; font-family: var(--body); text-align: left; width: 100%; display: grid; gap: 10px; }
+  .step-block { display: block; border-radius: 12px; border: 2px solid rgba(0,0,0,.06); transition: transform .2s ease, box-shadow .2s ease; }
+  .step:hover .step-block { transform: translateY(-4px); }
+  .step[aria-selected="true"] .step-block { box-shadow: 0 0 0 3px var(--paper), 0 0 0 6px var(--ink); }
+  .step-name { font-weight: 700; font-size: 16px; color: var(--ink); line-height: 1.2; }
+  .step-belt { display: block; font-size: 13px; font-weight: 600; color: var(--ink-3); }
+  .stairs li:nth-child(1) .step-block { height: 56px; }  .stairs li:nth-child(2) .step-block { height: 84px; }
+  .stairs li:nth-child(3) .step-block { height: 112px; } .stairs li:nth-child(4) .step-block { height: 140px; }
+  .stairs li:nth-child(5) .step-block { height: 168px; } .stairs li:nth-child(6) .step-block { height: 196px; }
+  .stairs li:nth-child(7) .step-block { height: 224px; }
+  @media (max-width: 760px) {
+    .stairs { grid-template-columns: 1fr; gap: 8px; }
+    .step { grid-template-columns: auto 1fr; align-items: center; gap: 14px; }
+    .stairs li .step-block { height: 44px !important; }
+    .stairs li:nth-child(1) .step-block { width: 44px; } .stairs li:nth-child(2) .step-block { width: 64px; }
+    .stairs li:nth-child(3) .step-block { width: 84px; } .stairs li:nth-child(4) .step-block { width: 104px; }
+    .stairs li:nth-child(5) .step-block { width: 124px; } .stairs li:nth-child(6) .step-block { width: 144px; }
+    .stairs li:nth-child(7) .step-block { width: 164px; }
+  }
+  .belt-panel { margin-top: 28px; border-radius: 20px; overflow: hidden; background: var(--card); box-shadow: 0 20px 44px -28px rgba(0,0,0,.35), 0 0 0 1px var(--line); display: grid; grid-template-columns: 1.1fr .9fr; }
+  .bp-main { padding: clamp(24px, 4vw, 40px); display: grid; gap: 14px; align-content: start; }
+  .bp-tag { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+  .bp-dot { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); }
+  .bp-main h3 { font-size: clamp(30px, 3.6vw, 42px); }
+  .bp-skill { font-size: 19px; color: var(--ink-2); }
+  .bp-home { margin-top: 6px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .bp-home .eyebrow { font-size: 12px; }
+  .bp-home p { margin-top: 6px; color: var(--ink-2); }
+  .bp-side { padding: clamp(24px, 4vw, 40px); display: grid; place-items: center; transition: background .3s ease; }
+  .bp-side .tcard { width: min(100%, 260px); transform: rotate(-2deg); }
+  .bp-side .tcard-q { font-size: 24px; min-height: 130px; }
+  @media (max-width: 760px) { .belt-panel { grid-template-columns: 1fr; } }
+
+  /* cards section */
+  .cards-sec { background: var(--paper-2); }
+  .cards-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .cards-photo { border-radius: 18px; box-shadow: 0 24px 50px -28px rgba(0,0,0,.4); }
+  .cards-copy { display: grid; gap: 18px; }
+  .cards-copy h2 { font-size: clamp(34px, 4.6vw, 54px); }
+  .ticks { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 10px; }
+  .ticks li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; color: var(--ink-2); }
+  .ticks li::before { content: ""; width: 20px; height: 20px; margin-top: 4px; border-radius: 50%; background: var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-6.5' fill='none' stroke='%231B1D24' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat; }
+  .fan-scroll { overflow-x: auto; margin-top: clamp(40px, 6vw, 64px); padding-block: 18px 26px; scrollbar-width: thin; }
+  .fan { display: grid; grid-template-columns: repeat(7, minmax(170px, 1fr)); gap: 16px; min-width: 1240px; }
+  @media (min-width: 1300px) { .fan { min-width: 0; } }
+  .fan .tcard:nth-child(odd) { transform: rotate(-1.5deg); }
+  .fan .tcard:nth-child(even) { transform: rotate(1.5deg) translateY(8px); }
+  .fan .tcard-q { font-size: 20px; min-height: 120px; }
+  .scroll-hint { font-size: 14px; color: var(--ink-3); }
+  @media (min-width: 1300px) { .scroll-hint { display: none; } }
+  @media (max-width: 820px) { .cards-grid { grid-template-columns: minmax(0, 1fr); } .cards-photo { max-width: min(100%, 460px); } }
+
+  /* how it works */
+  .how { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; list-style: none; padding: 0; margin: 0; }
+  .how li { background: var(--card); border-radius: 16px; padding: 26px 22px; box-shadow: 0 0 0 1px var(--line); display: grid; gap: 10px; align-content: start; }
+  .how-num { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 17px; color: var(--ink); }
+  .how h3 { font-size: 22px; }
+  .how p { color: var(--ink-2); font-size: 16px; }
+  .how-chart { margin-top: 32px; display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; background: var(--card); border-radius: 18px; padding: 22px; box-shadow: 0 0 0 1px var(--line); }
+  .how-chart img { border-radius: 10px; box-shadow: 0 0 0 1px var(--line); }
+  .how-chart p { color: var(--ink-2); }
+  .how-chart h3 { font-size: 24px; margin-bottom: 8px; }
+  @media (max-width: 960px) { .how { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .how { grid-template-columns: 1fr; } .how-chart { grid-template-columns: 1fr; } .how-chart img { max-width: min(100%, 240px); } }
+
+  /* coach */
+  .coach { background: var(--coach-bg); border-top: 6px solid var(--yellow); }
+  .coach-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .coach-copy { display: grid; gap: 18px; }
+  .coach-copy h2 { font-size: clamp(34px, 4.6vw, 54px); }
+  .coach-shots { position: relative; display: grid; gap: 16px; }
+  .shot { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 22px 44px -26px rgba(90,70,10,.5), 0 0 0 1px #EDE3C4; }
+  .shot-bar { display: flex; gap: 6px; padding: 10px 12px; background: #F6EFD9; }
+  .shot-bar i { width: 9px; height: 9px; border-radius: 50%; background: #D9CBA2; }
+  .shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .shot figcaption { font-size: 14px; font-weight: 600; color: var(--ink-2); padding: 10px 14px; border-top: 1px solid #F0E6C8; }
+  .shot figure { margin: 0; }
+  @media (max-width: 860px) { .coach-grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 480px) { .shot-row { grid-template-columns: 1fr; } }
+
+  /* video */
+  .tour { background: var(--ink); color: #fff; }
+  .tour .section-head .eyebrow { color: #B9BCC6; }
+  .tour .section-head p { color: #D2D5DD; font-size: 18.5px; }
+  .phones { display: flex; justify-content: center; gap: clamp(20px, 5vw, 64px); flex-wrap: wrap; }
+  .phone { width: min(100%, 290px); display: grid; gap: 14px; margin: 0; }
+  .phone-frame { background: #0E0F13; border-radius: 34px; padding: 10px; box-shadow: 0 0 0 1px #3A3D47, 0 30px 60px -20px rgba(0,0,0,.7); }
+  .phone video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 26px; background: #222; }
+  .phone figcaption { text-align: center; font-weight: 600; color: #D2D5DD; font-size: 15.5px; }
+
+  /* pricing */
+  .plans { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; }
+  .plan { position: relative; background: var(--card); border-radius: 20px; box-shadow: 0 0 0 1px var(--line); display: flex; flex-direction: column; overflow: hidden; }
+  .plan-band { height: 10px; }
+  .plan-body { padding: 26px 22px 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .plan-tag { align-self: flex-start; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; background: var(--paper-2); color: var(--ink-2); }
+  .plan h3 { font-size: 26px; }
+  .plan-price { font-family: var(--display); font-size: 44px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+  .plan-price small { font-family: var(--body); font-size: 14px; font-weight: 600; color: var(--ink-3); margin-left: 4px; }
+  .plan-desc { color: var(--ink-2); font-size: 16px; }
+  .plan ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; font-size: 15.5px; color: var(--ink-2); }
+  .plan ul li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; }
+  .plan ul li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; margin-top: 9px; background: var(--dot, var(--ink-3)); }
+  .plan .btn { margin-top: auto; width: 100%; padding: 0 14px; }
+  .plan .btn::after { content: ""; position: absolute; inset: 0; border-radius: 20px; }
+  .plan { transition: transform .15s ease, box-shadow .15s ease; cursor: pointer; }
+  .plan:hover { transform: translateY(-4px); box-shadow: 0 0 0 2px var(--ink), 0 24px 48px -28px rgba(0,0,0,.45); }
+  .plan.featured:hover { box-shadow: 0 0 0 3px var(--green), 0 30px 60px -24px rgba(40,80,30,.6); }
+  .plan .btn:hover { transform: none; }
+  .plan.featured { box-shadow: 0 0 0 3px var(--green), 0 30px 60px -30px rgba(40,80,30,.5); }
+  .plan.featured .plan-tag { background: var(--green); color: var(--ink); }
+  .plan-note { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 28px; color: var(--ink-3); font-size: 15px; font-weight: 500; }
+  @media (max-width: 1040px) { .plans { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 580px) { .plans { grid-template-columns: 1fr; } }
+
+  /* promises + faq */
+  .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: clamp(48px, 7vw, 72px); }
+  .trust div { border-radius: 16px; padding: 22px; display: grid; gap: 6px; }
+  .trust b { font-family: var(--display); font-size: 22px; font-weight: 600; }
+  .trust span { color: var(--ink-2); font-size: 15.5px; }
+  .t1 { background: #F1F1EE; } .t2 { background: #FDF3D2; } .t3 { background: #FCE7D5; }
+  .t4 { background: #E4F0DE; } .t5 { background: #E1EAF6; } .t6 { background: #EFE4DA; }
+  @media (max-width: 820px) { .trust { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 500px) { .trust { grid-template-columns: 1fr; } }
+  .faq { display: grid; gap: 10px; max-width: 820px; }
+  .faq details { background: var(--card); border-radius: 14px; box-shadow: 0 0 0 1px var(--line); }
+  .faq summary { cursor: pointer; list-style: none; padding: 18px 22px; font-weight: 700; font-size: 17.5px; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-size: 24px; line-height: 1; color: var(--ink-3); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { padding: 0 22px 20px; color: var(--ink-2); }
+
+  /* origin + closing */
+  .origin { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+  .origin h2 { font-size: clamp(30px, 4vw, 44px); }
+  .origin p { color: var(--ink-2); }
+  .origin p + p { margin-top: 14px; }
+  .origin blockquote { margin: 0; font-family: var(--display); font-style: italic; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.4; color: var(--ink); }
+  @media (max-width: 760px) { .origin { grid-template-columns: 1fr; } }
+  .closing { background: var(--navy); color: #fff; text-align: center; }
+  .closing-inner { padding-block: clamp(64px, 9vw, 104px); display: grid; gap: 22px; justify-items: center; }
+  .closing h2 { font-size: clamp(34px, 5vw, 58px); max-width: 16em; }
+  .closing p { color: #D9DEE8; font-size: 18.5px; max-width: 34em; }
+  .closing .btn-primary { background: var(--yellow); color: var(--ink); }
+  .closing .btn-primary:hover { background: #F5D56B; }
+  footer { padding-block: 36px 44px; }
+  .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; color: var(--ink-3); font-size: 14.5px; }
+  .badge { display: inline-flex; align-items: center; background: #1B2340; color: #fff; font-weight: 700; font-size: 13px; padding: 6px 11px; border-radius: 6px; text-decoration: none; }
+  .badge em { color: #E4B84A; font-style: italic; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
 </style>
 </head>
 <body>
 
-<div class="belt-strip">
-  <span style="background:#DCDCDC"></span><span style="background:#EFC84A"></span>
-  <span style="background:#E07E2A"></span><span style="background:#5FA348"></span>
-  <span style="background:#3E76BB"></span><span style="background:#7A5230"></span>
-  <span style="background:#252525"></span>
-</div>
-
-<div class="page">
-
-  <div class="page-header">
-    <h1>The Thinking Dojo</h1>
-    <p class="tagline">A structured system that teaches children how to think.</p>
-    <p class="origin">Not what to think — but how to process, decide, and act. &nbsp;·&nbsp; Ages 7–13</p>
-  </div>
-
-  <!-- WHAT IT IS -->
-  <div class="section">
-    <div class="section-label">What It Is</div>
-    <h2>Structured thinking for children.</h2>
-    <p>Most systems teach children what to think. Very few teach them how to think.</p>
-    <p>The Thinking Dojo is a calm, structured progression system. Children move through seven belt levels — each one developing a specific thinking skill.</p>
-    <p>No scores. No tests. No pressure. Just clear, structured thinking — built step by step.</p>
-    <div class="flow-bar">Notice &nbsp;→&nbsp; Pattern &nbsp;→&nbsp; Choice &nbsp;→&nbsp; Plan &nbsp;→&nbsp; Act &nbsp;→&nbsp; Review &nbsp;→&nbsp; Independent Thinking</div>
-  </div>
-
-  <!-- SEVEN LEVELS -->
-  <div class="section">
-    <div class="section-label">The Seven Levels</div>
-    <h2>Colour is Clarity.</h2>
-    <p>Each belt develops one specific thinking skill. Children progress naturally at their own pace.</p>
-    <div class="belt-progression">
-      <div class="belt-row" style="background:#F4F4F1"><div class="belt-dot" style="background:#DCDCDC;outline:1px solid #ccc"></div><div class="belt-name">White</div><div class="belt-desc">Notice — see what is happening clearly</div></div>
-      <div class="belt-row" style="background:#FEFAEE"><div class="belt-dot" style="background:#EFC84A"></div><div class="belt-name">Yellow</div><div class="belt-desc">Pattern — recognise what repeats</div></div>
-      <div class="belt-row" style="background:#FEF6EE"><div class="belt-dot" style="background:#E07E2A"></div><div class="belt-name">Orange</div><div class="belt-desc">Choice — understand your options</div></div>
-      <div class="belt-row" style="background:#F0F8EE"><div class="belt-dot" style="background:#5FA348"></div><div class="belt-name">Green</div><div class="belt-desc">Plan — think ahead clearly</div></div>
-      <div class="belt-row" style="background:#EEF4FC"><div class="belt-dot" style="background:#3E76BB"></div><div class="belt-name">Blue</div><div class="belt-desc">Act — turn thinking into action</div></div>
-      <div class="belt-row" style="background:#F5EEE8"><div class="belt-dot" style="background:#7A5230"></div><div class="belt-name">Brown</div><div class="belt-desc">Review — learn from outcomes</div></div>
-      <div class="belt-row" style="background:#F0F0EE"><div class="belt-dot" style="background:#252525"></div><div class="belt-name">Black</div><div class="belt-desc">Independent Thinker — think without being told</div></div>
+<header class="topbar">
+  <div class="strip" aria-hidden="true"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span><span class="s5"></span><span class="s6"></span><span class="s7"></span></div>
+  <div class="wrap topbar-inner">
+    <a class="wordmark" href="#top">The Thinking Dojo</a>
+    <div class="topbar-right">
+      <span class="topbar-age">Designed for ages 7–13</span>
+      <a class="btn btn-primary" href="#plans">Choose a pack</a>
     </div>
   </div>
+</header>
 
-  <!-- WHAT CHILDREN DEVELOP -->
-  <div class="section">
-    <div class="section-label">What Children Develop</div>
-    <h2>Real skills. Real situations.</h2>
-    <p>The Thinking Dojo develops thinking through everyday situations — not worksheets or tests.</p>
-    <ul>
-      <li>Notice what matters in any situation</li>
-      <li>Recognise patterns in what happens around them</li>
-      <li>Think through options before deciding</li>
-      <li>Plan with clear steps</li>
-      <li>Act with intention and follow through</li>
-      <li>Review what happened and learn from it</li>
-      <li>Think independently — without being guided</li>
-    </ul>
-    <div class="principles">
-      <div class="principle">No pressure</div>
-      <div class="principle">No scores</div>
-      <div class="principle">No right answers</div>
-      <div class="principle">No testing</div>
-    </div>
-  </div>
+<main id="top">
 
-  <!-- THINKING CARDS SHOWCASE -->
-  <div class="section">
-    <div class="section-label">The Thinking Cards</div>
-    <h2>One card. One question. One moment.</h2>
-    <p class="card-intro">Each belt level comes with a set of prompt cards. One question per card. Used in real situations — at home, at the table, in the car. No worksheet. No test. Just a question that opens up thinking at exactly the right level for where your child is now.</p>
-
-    <!-- White -->
-    <div class="card-belt-block">
-      <div class="card-belt-label">
-        <div class="dot" style="background:#DCDCDC;outline:1px solid #ccc"></div>
-        <div class="name">White Belt — Notice</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">A thinking system for children aged 7–13</p>
+        <h1>Learn how to think. <em>Not just what to think.</em></h1>
+        <p class="lede">Seven coloured belts, each one a real thinking skill. Your child climbs from Notice to Independent Thinker through cards, stories and short guided sessions, at their own pace and in everyday moments.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#plans">Choose where to start</a>
+          <a class="btn btn-ghost" href="#tour">Watch the 30-second tour</a>
+        </div>
+        <ul class="promise" aria-label="What it is not">
+          <li>No scores</li><li>No tests</li><li>No ads</li><li>No pressure</li>
+        </ul>
       </div>
-      <div class="card-grid">
-        <div class="think-card">
-          <div class="think-card-header" style="background:#E8E8E5">
-            <div class="think-card-belt" style="color:#555">White Belt</div>
-            <div class="think-card-label" style="color:#777">Notice</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What did you notice today?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
-        </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#E8E8E5">
-            <div class="think-card-belt" style="color:#555">White Belt</div>
-            <div class="think-card-label" style="color:#777">Notice</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What might others have missed?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
-        </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#E8E8E5">
-            <div class="think-card-belt" style="color:#555">White Belt</div>
-            <div class="think-card-label" style="color:#777">Notice</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What has changed since yesterday?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
+      <div class="hero-visual">
+        <img class="hero-poster" src="assets/hero-poster.jpg" width="1000" height="1500" alt="The Thinking Dojo Complete System cover: a boy climbing seven coloured stone steps, Notice to Think, towards a dojo at sunrise.">
+        <div class="tcard hero-card" aria-hidden="true">
+          <div class="tcard-head h-white">White Belt · Notice</div>
+          <div class="tcard-q">What did you notice today?</div>
+          <div class="tcard-foot">The Thinking Dojo</div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Orange -->
-    <div class="card-belt-block">
-      <div class="card-belt-label">
-        <div class="dot" style="background:#E07E2A"></div>
-        <div class="name">Orange Belt — Choice</div>
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="wrap problem-inner">
+      <h2>Most children are taught what to think. Very few are taught how.</h2>
+      <div>
+        <p>School fills children with answers. Nobody shows them how to notice what matters, spot a pattern, weigh up a choice or learn from what went wrong.</p>
+        <p><strong>The Thinking Dojo gives thinking a structure.</strong> One skill at a time, practised in real life: at the table, in the car, after a hard day.</p>
       </div>
-      <div class="card-grid">
-        <div class="think-card">
-          <div class="think-card-header" style="background:#E07E2A">
-            <div class="think-card-belt" style="color:#fff">Orange Belt</div>
-            <div class="think-card-label" style="color:#ffe5cc">Choice</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What could you do?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
+    </div>
+  </section>
+
+  <!-- BELTS -->
+  <section class="section" id="belts">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The seven belts</p>
+        <h2>Colour is Clarity.</h2>
+        <p class="lede">Each belt builds one thinking skill on top of the last. Tap a step to see what it trains and how it shows up at home.</p>
+      </div>
+
+      <ul class="stairs" role="tablist" aria-label="The seven belts">
+        <li><button class="step" role="tab" id="tab-0" data-i="0" aria-controls="belt-panel" aria-selected="true"><span class="step-block" style="background:var(--white-belt)"></span><span class="step-name">Notice<span class="step-belt">White</span></span></button></li>
+        <li><button class="step" role="tab" id="tab-1" data-i="1" aria-controls="belt-panel" aria-selected="false"><span class="step-block" style="background:var(--yellow)"></span><span class="step-name">Pattern<span class="step-belt">Yellow</span></span></button></li>
+        <li><button class="step" role="tab" id="tab-2" data-i="2" aria-controls="belt-panel" aria-selected="false"><span class="step-block" style="background:var(--orange)"></span><span class="step-name">Choice<span class="step-belt">Orange</span></span></button></li>
+        <li><button class="step" role="tab" id="tab-3" data-i="3" aria-controls="belt-panel" aria-selected="false"><span class="step-block" style="background:var(--green)"></span><span class="step-name">Plan<span class="step-belt">Green</span></span></button></li>
+        <li><button class="step" role="tab" id="tab-4" data-i="4" aria-controls="belt-panel" aria-selected="false"><span class="step-block" style="background:var(--blue)"></span><span class="step-name">Act<span class="step-belt">Blue</span></span></button></li>
+        <li><button class="step" role="tab" id="tab-5" data-i="5" aria-controls="belt-panel" aria-selected="false"><span class="step-block" style="background:var(--brown)"></span><span class="step-name">Review<span class="step-belt">Brown</span></span></button></li>
+        <li><button class="step" role="tab" id="tab-6" data-i="6" aria-controls="belt-panel" aria-selected="false"><span class="step-block" style="background:var(--black)"></span><span class="step-name">Independent Thinker<span class="step-belt">Black</span></span></button></li>
+      </ul>
+
+      <div class="belt-panel" id="belt-panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
+        <div class="bp-main">
+          <span class="bp-tag"><span class="bp-dot" id="bp-dot" style="background:var(--white-belt)"></span><span id="bp-belt">White belt · Level 1 of 7</span></span>
+          <h3 id="bp-name">Notice</h3>
+          <p class="bp-skill" id="bp-skill">Sees what is happening and can describe it clearly.</p>
+          <div class="bp-home">
+            <p class="eyebrow">What it looks like at home</p>
+            <p id="bp-home">Your child describes what actually happened before deciding what it means.</p>
           </div>
         </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#E07E2A">
-            <div class="think-card-belt" style="color:#fff">Orange Belt</div>
-            <div class="think-card-label" style="color:#ffe5cc">Choice</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What might happen if you choose this?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
-        </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#E07E2A">
-            <div class="think-card-belt" style="color:#fff">Orange Belt</div>
-            <div class="think-card-label" style="color:#ffe5cc">Choice</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What could go wrong?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
+        <div class="bp-side" id="bp-side" style="background:#F1F1EE">
+          <div class="tcard">
+            <div class="tcard-head h-white" id="bp-card-head">White Belt · Notice</div>
+            <div class="tcard-q" id="bp-card-q">What did you notice today?</div>
+            <div class="tcard-foot">The Thinking Dojo</div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Green -->
-    <div class="card-belt-block">
-      <div class="card-belt-label">
-        <div class="dot" style="background:#5FA348"></div>
-        <div class="name">Green Belt — Plan</div>
-      </div>
-      <div class="card-grid">
-        <div class="think-card">
-          <div class="think-card-header" style="background:#5FA348">
-            <div class="think-card-belt" style="color:#fff">Green Belt</div>
-            <div class="think-card-label" style="color:#d4edcc">Plan</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What do you do first?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
-        </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#5FA348">
-            <div class="think-card-belt" style="color:#fff">Green Belt</div>
-            <div class="think-card-label" style="color:#d4edcc">Plan</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What are the steps?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
-        </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#5FA348">
-            <div class="think-card-belt" style="color:#fff">Green Belt</div>
-            <div class="think-card-label" style="color:#d4edcc">Plan</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What is your goal?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
+  <!-- CARDS -->
+  <section class="section cards-sec" id="cards">
+    <div class="wrap">
+      <div class="cards-grid">
+        <img class="cards-photo" src="assets/chart-and-cards.jpg" width="900" height="1350" loading="lazy" alt="The Thinking Progress Chart with White, Orange and Green belt thinking cards in front of it.">
+        <div class="cards-copy">
+          <p class="eyebrow">Thinking cards &amp; progress chart</p>
+          <h2>One card. One question. One moment.</h2>
+          <p class="lede">Every belt has its own pack of printable cards. Pull one at dinner or in the car, ask the question, and listen. No worksheet and no marking.</p>
+          <ul class="ticks">
+            <li>A card pack for each of the seven belts</li>
+            <li>The Thinking Progress Chart shows where your child is now</li>
+            <li>Print at home, cut, and keep them in the kitchen drawer</li>
+            <li>No screen needed</li>
+          </ul>
+          <div><a class="btn btn-primary" href="#plans">See what's in each pack</a></div>
         </div>
       </div>
-    </div>
 
-    <!-- Blue -->
-    <div class="card-belt-block" style="margin-bottom:0">
-      <div class="card-belt-label">
-        <div class="dot" style="background:#3E76BB"></div>
-        <div class="name">Blue Belt — Act</div>
-      </div>
-      <div class="card-grid">
-        <div class="think-card">
-          <div class="think-card-header" style="background:#3E76BB">
-            <div class="think-card-belt" style="color:#fff">Blue Belt</div>
-            <div class="think-card-label" style="color:#ccddee">Act</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What will you do now?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
-        </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#3E76BB">
-            <div class="think-card-belt" style="color:#fff">Blue Belt</div>
-            <div class="think-card-label" style="color:#ccddee">Act</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">What is one small step?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
-        </div>
-        <div class="think-card">
-          <div class="think-card-header" style="background:#3E76BB">
-            <div class="think-card-belt" style="color:#fff">Blue Belt</div>
-            <div class="think-card-label" style="color:#ccddee">Act</div>
-          </div>
-          <div class="think-card-body">
-            <div class="think-card-q">Did you complete it?</div>
-            <div class="think-card-brand">The Thinking Dojo</div>
-          </div>
+      <div class="fan-scroll" tabindex="0" aria-label="One example card from each belt">
+        <div class="fan">
+          <div class="tcard"><div class="tcard-head h-white">White Belt · Notice</div><div class="tcard-q">What might others have missed?</div><div class="tcard-foot">The Thinking Dojo</div></div>
+          <div class="tcard"><div class="tcard-head h-yellow">Yellow Belt · Pattern</div><div class="tcard-q">What usually happens when you are in a rush?</div><div class="tcard-foot">The Thinking Dojo</div></div>
+          <div class="tcard"><div class="tcard-head h-orange">Orange Belt · Choice</div><div class="tcard-q">What could go wrong?</div><div class="tcard-foot">The Thinking Dojo</div></div>
+          <div class="tcard"><div class="tcard-head h-green">Green Belt · Plan</div><div class="tcard-q">What do you do first?</div><div class="tcard-foot">The Thinking Dojo</div></div>
+          <div class="tcard"><div class="tcard-head h-blue">Blue Belt · Act</div><div class="tcard-q">What will you do now?</div><div class="tcard-foot">The Thinking Dojo</div></div>
+          <div class="tcard"><div class="tcard-head h-brown">Brown Belt · Review</div><div class="tcard-q">What would you do differently next time?</div><div class="tcard-foot">The Thinking Dojo</div></div>
+          <div class="tcard"><div class="tcard-head h-black">Black Belt · Independent</div><div class="tcard-q">What do you think, and why?</div><div class="tcard-foot">The Thinking Dojo</div></div>
         </div>
       </div>
+      <p class="scroll-hint">Swipe to see a card from every belt →</p>
     </div>
-  </div>
+  </section>
 
   <!-- HOW IT WORKS -->
-  <div class="section">
-    <div class="section-label">How It Works</div>
-    <h2>A process, not a test.</h2>
-    <p class="card-intro">The Thinking Dojo is designed to be used in real moments — not in a classroom, not as homework. A card pulled at dinner. A question asked after a difficult situation. A session on the Coach Engine before bed. The thinking happens in life, not about life.</p>
-    <div class="how-steps">
-      <div class="how-step">
-        <div class="how-step-num" style="background:#DCDCDC;color:#555">1</div>
-        <div class="how-step-content">
-          <h4>Identify where your child is now</h4>
-          <p>Use the Thinking Progress Chart to observe — not test — your child's natural thinking. Which belt level best describes how they currently approach situations? There is no wrong answer.</p>
-        </div>
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>A process, not a test.</h2>
+        <p class="lede">The thinking happens in real moments, not in a classroom or as homework. Four simple steps.</p>
       </div>
-      <div class="how-step">
-        <div class="how-step-num" style="background:#EFC84A;color:#fff">2</div>
-        <div class="how-step-content">
-          <h4>Use the cards in everyday moments</h4>
-          <p>Pull one card from the relevant belt pack. Ask the question naturally — at the table, in the car, after something happened. One question. Let them think. Don't correct. Don't guide. Just listen.</p>
-        </div>
-      </div>
-      <div class="how-step">
-        <div class="how-step-num" style="background:#E07E2A;color:#fff">3</div>
-        <div class="how-step-content">
-          <h4>Use the Coach Engine for guided sessions</h4>
-          <p>When your child is ready for a structured session, open the Coach Engine. Six guided questions per belt level. The screen changes colour as they progress. Private and licensed — their responses belong to them.</p>
-        </div>
-      </div>
-      <div class="how-step">
-        <div class="how-step-num" style="background:#5FA348;color:#fff">4</div>
-        <div class="how-step-content">
-          <h4>Progress naturally — no pressure</h4>
-          <p>When you notice your child thinking at the next level naturally and consistently, move them up. Progress is observational. There is no test, no pass mark, no timeline. Every child moves at their own pace.</p>
+      <ol class="how">
+        <li><span class="how-num" style="background:var(--white-belt)">1</span><h3>Find their belt</h3><p>Use the Thinking Progress Chart to observe how your child thinks right now. There is no wrong answer.</p></li>
+        <li><span class="how-num" style="background:var(--yellow)">2</span><h3>Use the cards</h3><p>Pull one card from their belt pack in an everyday moment. Ask it, then let them think. Don't correct, just listen.</p></li>
+        <li><span class="how-num" style="background:var(--orange)">3</span><h3>Add a guided session</h3><p>When they're ready, open the Coach for six calm questions at their level. The screen takes on their belt colour.</p></li>
+        <li><span class="how-num" style="background:var(--green)">4</span><h3>Move up naturally</h3><p>When they think at the next level on their own, move them up. No pass mark and no timeline.</p></li>
+      </ol>
+      <div class="how-chart">
+        <img src="assets/progress-chart.jpg" width="800" height="976" loading="lazy" alt="The Thinking Progress Chart: seven coloured bands from Notice to Independent Thinker, each with a one-line description.">
+        <div>
+          <h3>The Thinking Progress Chart</h3>
+          <p>Every pack includes the chart. Stick it on the fridge. It describes each belt in one plain sentence, so you can see where your child is and what comes next without testing them.</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- THE SYSTEM -->
-  <div class="section">
-    <div class="section-label">The System</div>
-    <h2>Three formats. One framework.</h2>
-    <p>The Thinking Dojo is available as physical materials, a story series, and a digital coaching engine — all built around the same seven-level framework. Each format works independently. Together they create a complete thinking environment.</p>
-    <h3>Thinking Cards</h3>
-    <p>Printable card sets by belt level. Seven packs — one per belt. Each card carries a single question designed to activate the specific thinking skill for that level. Print, cut, and use in any real moment. No setup. No screen.</p>
-    <h3>Story Series</h3>
-    <p>Seven short stories — one per belt level. Each story follows Kai and Tana through a real-world situation that requires the thinking skill of that belt. Children read the situation, see the thinking in action, and recognise the skill in their own life.</p>
-    <h3>The Coach Engine</h3>
-    <p>A digital coaching system that guides a child through their current belt level with six structured questions per session. The screen changes colour to match the active belt. Sessions are private and licensed — responses belong to the child, not a platform. Works on iPhone, iPad, and desktop without an app download.</p>
-    <ul>
-      <li>Colour-progressive interface — each belt has its own visual environment</li>
-      <li>Six guided questions per level — structured but never prescriptive</li>
-      <li>Licensed access — one purchase, permanent use, all devices</li>
-    </ul>
-  </div>
-
-  <!-- GET THE SYSTEM -->
-  <div class="section">
-    <div class="section-label">Get the System</div>
-    <h2>Four entry points.</h2>
-    <p>Start where it makes sense. Each tier includes everything from the one before it.</p>
-    <div class="tier-grid">
-      <div class="tier-card">
-        <div class="tier-price">£9.99</div>
-        <div class="tier-name">Workbook</div>
-        <p>The core workbook. Seven belt levels. Available on Amazon KDP.</p>
+  <!-- COACH -->
+  <section class="section coach" id="coach">
+    <div class="wrap coach-grid">
+      <div class="coach-copy">
+        <p class="eyebrow">The Coach Engine</p>
+        <h2>A calm, guided session at every belt.</h2>
+        <p class="lede">Six structured questions per level. Your child writes their thinking in their own words, then rates how clear it felt. The whole screen takes on the colour of their belt.</p>
+        <ul class="ticks">
+          <li>All seven belts unlocked</li>
+          <li>Private: their answers belong to them</li>
+          <li>Session summaries you can export</li>
+          <li>Works on iPhone, iPad and desktop, no app to download</li>
+        </ul>
+        <div><a class="btn btn-primary" href="#plans">Get the Coach Engine</a></div>
       </div>
-      <div class="tier-card">
-        <div class="tier-price">£24.99</div>
-        <div class="tier-name">Starter System</div>
-        <p>Workbook · Story Series · Thinking Cards · Progress Tracker · Thinking Chart</p>
-      </div>
-      <div class="tier-card">
-        <div class="tier-price">£44.99</div>
-        <div class="tier-name">Complete System</div>
-        <p>Everything in Starter · Plus Parent Guide · Plus Premium Thinking Cards</p>
-      </div>
-      <div class="tier-card">
-        <div class="tier-price">£64.99</div>
-        <div class="tier-name">Coach Engine</div>
-        <p>Digital coaching system · Licensed · Seven belt levels · All devices</p>
+      <div class="coach-shots">
+        <div class="shot-row">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/coach-intro.jpg" width="680" height="390" loading="lazy" alt="Coach screen: Yellow, Pattern. This level trains your ability to recognise what repeats."><figcaption>Each belt opens with its skill</figcaption></figure>
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/coach-focus.jpg" width="485" height="380" loading="lazy" alt="Coach screen: Focus. Take a moment. Think carefully. Answer clearly."><figcaption>A moment to focus first</figcaption></figure>
+        </div>
+        <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/coach-question.jpg" width="685" height="430" loading="lazy" alt="Coach question screen, Yellow belt 1 of 6: What usually happens when you are in a rush? The child has typed: I forget things, and rated it Clear."><figcaption>Question 1 of 6, answered in their own words</figcaption></figure>
       </div>
     </div>
-    <a class="cta-link" href="https://opportunity-intelligence.lemonsqueezy.com/">→ Get the Thinking Dojo System</a>
-  </div>
+  </section>
+
+  <!-- VIDEO TOUR -->
+  <section class="section tour" id="tour">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The 30-second tour</p>
+        <h2>See the whole system.</h2>
+        <p>Two short clips: the workbook and chart, then the cards and belt packs.</p>
+      </div>
+      <div class="phones">
+        <figure class="phone">
+          <div class="phone-frame"><video src="assets/tour-workbook.mp4" poster="assets/tour-workbook-poster.jpg" muted loop playsinline preload="metadata" controls aria-label="Tour: the workbook and the Thinking Progress Chart"></video></div>
+          <figcaption>A thinking system, not a workbook</figcaption>
+        </figure>
+        <figure class="phone">
+          <div class="phone-frame"><video src="assets/tour-system.mp4" poster="assets/tour-system-poster.jpg" muted loop playsinline preload="metadata" controls aria-label="Tour: the progress system, thinking cards and belt packs"></video></div>
+          <figcaption>Cards and belt packs</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="section" id="plans">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Choose where to start</p>
+        <h2>Four ways in.</h2>
+        <p class="lede">Each pack includes everything in the one before it. The Coach Engine is the digital companion and works on its own or alongside any pack.</p>
+      </div>
+      <div class="plans">
+        <article class="plan" style="--dot:var(--yellow)">
+          <div class="plan-band" style="background:var(--yellow)"></div>
+          <div class="plan-body">
+            <span class="plan-tag">Start here</span>
+            <h3>Workbook</h3>
+            <div class="plan-price">£9.99</div>
+            <p class="plan-desc">The core workbook that introduces all seven belts, step by step.</p>
+            <ul><li>Seven belt levels</li><li>Digital download (PDF)</li><li>Use alone or with a parent</li></ul>
+            <a class="btn btn-ghost" href="https://opportunity-intelligence.lemonsqueezy.com/checkout/buy/8af786c5-1078-4849-b396-c9a076ec3a75">Buy Workbook</a>
+          </div>
+        </article>
+        <article class="plan" style="--dot:var(--orange)">
+          <div class="plan-band" style="background:var(--orange)"></div>
+          <div class="plan-body">
+            <span class="plan-tag">Screen-free</span>
+            <h3>Starter System</h3>
+            <div class="plan-price">£24.99</div>
+            <p class="plan-desc">Everything you need to start using it at home this week.</p>
+            <ul><li>Starter Workbook</li><li>Story Series (7 books)</li><li>Printable Thinking Cards, all levels</li><li>Progress Tracker</li><li>Thinking Progress Chart</li></ul>
+            <a class="btn btn-ghost" href="https://opportunity-intelligence.lemonsqueezy.com/checkout/buy/e31b2c90-b3aa-4d3c-ab80-ac8888d7f4fd">Buy Starter</a>
+          </div>
+        </article>
+        <article class="plan featured" style="--dot:var(--green)">
+          <div class="plan-band" style="background:var(--green)"></div>
+          <div class="plan-body">
+            <span class="plan-tag">Most complete</span>
+            <h3>Complete System</h3>
+            <div class="plan-price">£44.99</div>
+            <p class="plan-desc">The whole framework, with a guide for you as the parent.</p>
+            <ul><li>Everything in the Starter System</li><li>Parent Guide</li><li>Premium Thinking Cards</li></ul>
+            <a class="btn btn-primary" href="https://opportunity-intelligence.lemonsqueezy.com/checkout/buy/1b10ff78-cf95-45e1-944c-16d4c5102d56">Buy Complete</a>
+          </div>
+        </article>
+        <article class="plan" style="--dot:var(--blue)">
+          <div class="plan-band" style="background:var(--blue)"></div>
+          <div class="plan-body">
+            <span class="plan-tag">Digital coach</span>
+            <h3>Coach Engine</h3>
+            <div class="plan-price">£64.99</div>
+            <p class="plan-desc">Guided 10–15 minute sessions at your child's belt level.</p>
+            <ul><li>All seven belts unlocked</li><li>Six guided questions per level</li><li>Progress tracking and session summaries</li><li>iPhone, iPad and desktop</li><li>One purchase, permanent use</li></ul>
+            <a class="btn btn-ghost" href="https://opportunity-intelligence.lemonsqueezy.com/checkout/buy/8dff00d7-dc5f-4c5d-bb27-05260d44680c">Buy Coach Engine</a>
+          </div>
+        </article>
+      </div>
+      <div class="plan-note"><span>Secure checkout by Lemon Squeezy</span><span>Card or PayPal</span><span>Instant access after purchase</span></div>
+    </div>
+  </section>
+
+  <!-- TRUST + FAQ -->
+  <section class="section" style="padding-top:0" id="faq">
+    <div class="wrap">
+      <div class="trust">
+        <div class="t1"><b>No scores</b><span>Progress is observed, never marked.</span></div>
+        <div class="t2"><b>No tests</b><span>No pass mark and no timeline.</span></div>
+        <div class="t3"><b>No gamification</b><span>No streaks, points or addictive mechanics.</span></div>
+        <div class="t4"><b>Screen-free core</b><span>Cards, stories and chart work on paper.</span></div>
+        <div class="t5"><b>Private</b><span>Coach answers belong to your child.</span></div>
+        <div class="t6"><b>Their own pace</b><span>Every child moves up when they're ready.</span></div>
+      </div>
+
+      <div class="section-head" style="margin-bottom:28px">
+        <p class="eyebrow">Questions parents ask</p>
+        <h2>Before you choose.</h2>
+      </div>
+      <div class="faq">
+        <details><summary>What age is it for?</summary><p>The Thinking Dojo is designed for children aged 7–13. Younger children usually spend longer on the early belts, which is exactly how it should work.</p></details>
+        <details><summary>Which pack should I start with?</summary><p>If you want to try the idea, start with the Workbook. For everyday use at home, the Starter System gives you the stories, cards and chart. The Complete System adds a Parent Guide and premium cards. Add the Coach Engine if your child would enjoy guided sessions on a screen.</p></details>
+        <details><summary>Does my child need a screen?</summary><p>No. The workbook, stories, cards and chart are all used on paper in everyday moments. Only the Coach Engine is on a screen, and it is calm by design with no ads or points.</p></details>
+        <details><summary>Where does my child start?</summary><p>Most children start at White (Notice). Use the Thinking Progress Chart to observe how your child thinks now and pick the belt that fits best. There is no wrong answer.</p></details>
+        <details><summary>What devices does the Coach Engine work on?</summary><p>It runs in the web browser on iPhone, iPad and desktop. There is no app to download.</p></details>
+        <details><summary>How do I get it after buying?</summary><p>Checkout is handled securely by Lemon Squeezy. You get instant access to your files straight after purchase.</p></details>
+      </div>
+    </div>
+  </section>
 
   <!-- ORIGIN -->
-  <div class="section">
-    <div class="section-label">Origin</div>
-    <h2>Where this came from.</h2>
-    <p>The Thinking Dojo is the earliest expression of the Opportunity Intelligence framework — a structured thinking system developed inside live strategic environments where signal matters and noise is costly.</p>
-    <p>The same cognitive framework that underpins institutional decision-making — adapted for children aged 7–13.</p>
-    <p>Same architecture. Different scale. Same outcome: clear, independent thinking.</p>
-    <div class="callout">
-      <p>This system is not theoretical. It was developed inside live M&amp;A environments where signal matters and noise is costly.</p>
+  <section class="section" style="background:var(--paper-2)">
+    <div class="wrap origin">
+      <div>
+        <p class="eyebrow" style="margin-bottom:14px">Where it came from</p>
+        <h2>Built from how real decisions get made.</h2>
+      </div>
+      <div>
+        <p>The Thinking Dojo is the earliest expression of the Opportunity Intelligence framework, a structured thinking system developed inside live M&amp;A environments where signal matters and noise is costly.</p>
+        <p>The same architecture, at a different scale, adapted for children aged 7–13. The outcome is the same: clear, independent thinking.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="quote">
-    "Thinking is not something children are taught.<br>
-    It is something they develop.<br>
-    The Thinking Dojo simply gives it structure."
-  </div>
-
-  <div class="page-footer">
-    <p>Part of the Opportunity Intelligence Ecosystem</p>
-    <div class="belt-strip" style="border-radius:3px;overflow:hidden">
-      <span style="background:#DCDCDC"></span><span style="background:#EFC84A"></span>
-      <span style="background:#E07E2A"></span><span style="background:#5FA348"></span>
-      <span style="background:#3E76BB"></span><span style="background:#7A5230"></span>
-      <span style="background:#252525"></span>
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="strip" aria-hidden="true"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span><span class="s5"></span><span class="s6"></span><span class="s7"></span></div>
+    <div class="wrap closing-inner">
+      <h2>Thinking is something children develop. The Thinking Dojo gives it structure.</h2>
+      <a class="btn btn-primary" href="#plans">Choose a pack</a>
     </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>The Thinking Dojo · Part of the Opportunity Intelligence Ecosystem</span>
+    <span class="badge">B-<em>Useful</em></span>
   </div>
+</footer>
 
-</div>
+<script>
+(function () {
+  var belts = [
+    { name: "Notice", belt: "White", tint: "#F1F1EE", dot: "var(--white-belt)", head: "h-white",
+      skill: "Sees what is happening and can describe it clearly.",
+      home: "Your child describes what actually happened before deciding what it means.",
+      q: "What did you notice today?" },
+    { name: "Pattern", belt: "Yellow", tint: "#FDF3D2", dot: "var(--yellow)", head: "h-yellow",
+      skill: "Begins to recognise repetition and simple connections.",
+      home: "They spot that mornings go wrong on the days they rush.",
+      q: "What usually happens when you are in a rush?" },
+    { name: "Choice", belt: "Orange", tint: "#FCE7D5", dot: "var(--orange)", head: "h-orange",
+      skill: "Makes simple decisions and starts thinking about what might happen next.",
+      home: "They name two or three options before picking one.",
+      q: "What might happen if you choose this?" },
+    { name: "Plan", belt: "Green", tint: "#E4F0DE", dot: "var(--green)", head: "h-green",
+      skill: "Thinks ahead and begins to organise actions step by step.",
+      home: "They work out what comes first on a school project.",
+      q: "What is your goal?" },
+    { name: "Act", belt: "Blue", tint: "#E1EAF6", dot: "var(--blue)", head: "h-blue",
+      skill: "Acts with intention and adjusts while doing.",
+      home: "They start the plan and change course when something doesn't work.",
+      q: "What is one small step?" },
+    { name: "Review", belt: "Brown", tint: "#EFE4DA", dot: "var(--brown)", head: "h-brown",
+      skill: "Understands what happened and begins learning from outcomes.",
+      home: "After a match or a test, they say what they would do differently.",
+      q: "What would you do differently next time?" },
+    { name: "Independent Thinker", belt: "Black", tint: "#E6E6E4", dot: "var(--black)", head: "h-black",
+      skill: "Thinks clearly, independently, and with structure.",
+      home: "They work a problem through on their own before asking for help.",
+      q: "What do you think, and why?" }
+  ];
+  var tabs = document.querySelectorAll(".step");
+  var panel = document.getElementById("belt-panel");
+  function el(id) { return document.getElementById(id); }
+  function show(i) {
+    var b = belts[i];
+    for (var t = 0; t < tabs.length; t++) {
+      tabs[t].setAttribute("aria-selected", t === i ? "true" : "false");
+      tabs[t].tabIndex = t === i ? 0 : -1;
+    }
+    panel.setAttribute("aria-labelledby", "tab-" + i);
+    el("bp-dot").style.background = b.dot;
+    el("bp-belt").textContent = b.belt + " belt · Level " + (i + 1) + " of 7";
+    el("bp-name").textContent = b.name;
+    el("bp-skill").textContent = b.skill;
+    el("bp-home").textContent = b.home;
+    el("bp-side").style.background = b.tint;
+    var head = el("bp-card-head");
+    head.className = "tcard-head " + b.head;
+    head.textContent = b.belt + " Belt · " + (i === 6 ? "Independent" : b.name);
+    el("bp-card-q").textContent = b.q;
+  }
+  for (var k = 0; k < tabs.length; k++) {
+    tabs[k].addEventListener("click", function () { show(parseInt(this.getAttribute("data-i"), 10)); });
+    tabs[k].addEventListener("keydown", function (e) {
+      var i = parseInt(this.getAttribute("data-i"), 10);
+      var n = -1;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") { n = (i + 1) % 7; }
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") { n = (i + 6) % 7; }
+      if (n > -1) { e.preventDefault(); show(n); tabs[n].focus(); }
+    });
+  }
+  show(0);
 
-<div class="belt-strip">
-  <span style="background:#DCDCDC"></span><span style="background:#EFC84A"></span>
-  <span style="background:#E07E2A"></span><span style="background:#5FA348"></span>
-  <span style="background:#3E76BB"></span><span style="background:#7A5230"></span>
-  <span style="background:#252525"></span>
-</div>
-
+  /* play tour videos only while visible */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var vids = document.querySelectorAll(".phone video");
+  if (!reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      for (var j = 0; j < entries.length; j++) {
+        var v = entries[j].target;
+        if (entries[j].isIntersecting) {
+          var p = v.play();
+          if (p && p.catch) { p.catch(function () {}); }
+        } else { v.pause(); }
+      }
+    }, { threshold: 0.4 });
+    for (var m = 0; m < vids.length; m++) { io.observe(vids[m]); }
+  }
+})();
+</script>
 
 <script data-goatcounter="https://signal333.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
