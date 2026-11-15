@@ -2,17 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://oi-ecosystem.github.io/thinking-dojo/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
-    <loc>https://oi-ecosystem.github.io/thinking-dojo/privacy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/</loc>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
-    <loc>https://oi-ecosystem.github.io/thinking-dojo/terms.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/how-to-teach-your-child-to-think-for-themselves/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/what-to-ask-instead-of-how-was-school/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/my-child-rushes-and-makes-careless-mistakes/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/how-to-help-your-child-make-decisions/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/what-to-say-after-a-bad-result/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/screen-free-thinking-activities-for-children/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/five-minute-thinking-starters-for-the-classroom/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/articles/thinking-skills-for-home-education/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/questions/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/teachers/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/free-cards/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/privacy/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://oi-ecosystem.github.io/thinking-dojo/terms/</loc>
+    <lastmod>2026-11-15</lastmod>
   </url>
 </urlset>
