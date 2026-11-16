@@ -274,6 +274,69 @@ def band(up, heading="Try it tonight with seven free cards.",
 
 ARTICLES = [
     {
+        "slug": "three-questions-for-anti-bullying-week",
+        "group": "teachers", "belt": 0,
+        "date": "2026-11-16", "date_human": "16 November 2026", "rss_date": "Mon, 16 Nov 2026 09:00:00 +0000",
+        "title": "Three questions for Anti-Bullying Week: notice, choose, act",
+        "desc": "Anti-Bullying Week 2026 runs from 16 to 20 November with the theme Break the Silence. Three five-minute questions that help children aged 7 to 13 notice, choose and act.",
+        "lede": "Anti-Bullying Week runs from Monday 16 to Friday 20 November 2026, and this year’s theme is Break the Silence. Speaking up starts earlier than it looks, with noticing. Here are three questions for the week, five minutes each, for a classroom or a kitchen table.",
+        "body": """
+<h2>What the week is</h2>
+<p>Anti-Bullying Week is run each November by the Anti-Bullying Alliance. The 2026 theme, Break the Silence, asks children and adults to start conversations about bullying, to speak up, to listen and to act together. The week opens with Odd Socks Day on Monday 16 November.</p>
+<p>The Alliance publishes its own school resources, and those come first. You can find them on <a href="https://anti-bullyingalliance.org.uk/" rel="noopener">the Anti-Bullying Alliance website</a>.</p>
+<p>The Thinking Dojo is not part of the campaign and is not an anti-bullying programme. What follows is a short thinking routine that sits beside the week’s own materials and your school’s policy.</p>
+
+<h2>Why start with noticing</h2>
+<p>A child can’t speak up about something they haven’t noticed. And they can’t choose what to do about it until they can say what they saw.</p>
+<p>So the order matters. Notice first, then choose, then act. These are three of the seven thinking skills the Dojo teaches, and each has one plain question.</p>
+
+<h2>Early in the week · Notice</h2>
+<span class="ask"><small>White Belt · Notice</small>What did you notice today?</span>
+<p>Ask it as it stands, then steer gently towards people. Who was on their own at break? Who went quiet? Who wasn’t in the game?</p>
+<p>You are asking pupils to describe what they saw. Nobody has to be named and nobody is being accused. A second question helps them look closer:</p>
+<span class="ask"><small>White Belt · Notice</small>What might others have missed?</span>
+
+<h2>Midweek · Choose</h2>
+<span class="ask"><small>Orange Belt · Choice</small>What might happen if you choose this?</span>
+<p>Use a made-up situation, so no real child is the subject. For example: someone in the class is left out of the same game every day.</p>
+<p>Take three choices in turn and ask the question about each:</p>
+<ul>
+<li><strong>Say nothing.</strong></li>
+<li><strong>Tell an adult.</strong></li>
+<li><strong>Ask them to join in.</strong></li>
+</ul>
+<p>Let pupils follow each choice through. They will usually work out for themselves that saying nothing is also a choice, and that it has a result.</p>
+
+<h2>End of the week · Act</h2>
+<span class="ask"><small>Blue Belt · Act</small>What is one small step?</span>
+<p>Small is the point. Sitting next to someone counts. So does asking “Are you all right?”</p>
+<p>Telling an adult counts too. For many children it is the hardest step, and it is the one this year’s theme is about.</p>
+
+<h2>The five-minute routine</h2>
+<ol>
+<li>Put one question on the board.</li>
+<li>One minute of silent thinking.</li>
+<li>Two minutes in pairs.</li>
+<li>Two minutes hearing from three or four pupils.</li>
+</ol>
+<p>Nothing is written down and nothing is marked.</p>
+
+<h2>At home</h2>
+<p>Ask one question at dinner or in the car, then wait. If your child describes something that happened to them or to someone else, listen first. The urge to fix it straight away is strong, and it can end the conversation.</p>
+<p>Thank them for telling you. Then, if it sounds like bullying, speak to the school.</p>
+
+<h2>If a child tells you something worrying</h2>
+<p>A question like this can bring out more than you expected. In school, follow your safeguarding and anti-bullying procedures and speak to your designated safeguarding lead. These questions support that process. They don’t replace it.</p>
+
+<h2>Print the three cards</h2>
+<p>The three questions are on one page, ready to print and cut out: <a href="../../free-cards/anti-bullying-week/">three thinking cards for Anti-Bullying Week</a>.</p>
+
+<h2>After the week</h2>
+<p>Noticing, choosing and acting are habits, so they need more than five days. The same questions work on any Monday of the year. There is a full week of them in <a href="../five-minute-thinking-starters-for-the-classroom/">five-minute thinking starters for the classroom</a>.</p>
+""",
+        "next": ["five-minute-thinking-starters-for-the-classroom", "what-to-ask-instead-of-how-was-school"],
+    },
+    {
         "slug": "how-to-teach-your-child-to-think-for-themselves",
         "group": "parents", "belt": 6,
         "title": "How do I teach my child to think for themselves?",
@@ -596,13 +659,13 @@ def build_articles():
     <h2>Keep reading</h2>
     <div class="rows">{nxt}</div>
   </div>
-</section>""".format(who=who, title=a["title"], lede=a["lede"], date=PUBLISHED_HUMAN, body=body_html,
+</section>""".format(who=who, title=a["title"], lede=a["lede"], date=a.get("date_human", PUBLISHED_HUMAN), body=body_html,
                     card=tcard(a["belt"]), up=up, band=band(up), nxt=nxt)
         url = BASE + "articles/" + a["slug"] + "/"
         ld = [{
             "@context": "https://schema.org", "@type": "Article",
             "headline": a["title"], "description": a["desc"],
-            "datePublished": PUBLISHED, "dateModified": PUBLISHED,
+            "datePublished": a.get("date", PUBLISHED), "dateModified": a.get("date", PUBLISHED),
             "author": {"@type": "Organization", "name": "The Thinking Dojo", "url": BASE},
             "publisher": {"@type": "Organization", "name": "The Thinking Dojo", "url": BASE},
             "image": BASE + "hero-poster.jpg", "mainEntityOfPage": url,
@@ -654,8 +717,8 @@ def build_feed():
     for a in ARTICLES:
         url = BASE + "articles/" + a["slug"] + "/"
         items += ("  <item>\n    <title>%s</title>\n    <link>%s</link>\n    <guid>%s</guid>\n"
-                  "    <pubDate>Sun, 15 Nov 2026 09:00:00 +0000</pubDate>\n    <description>%s</description>\n  </item>\n"
-                  % (esc(a["title"]), url, url, esc(a["desc"])))
+                  "    <pubDate>%s</pubDate>\n    <description>%s</description>\n  </item>\n"
+                  % (esc(a["title"]), url, url, a.get("rss_date", "Sun, 15 Nov 2026 09:00:00 +0000"), esc(a["desc"])))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n'
            '  <title>The Thinking Dojo: articles for parents and teachers</title>\n'
            '  <link>%sarticles/</link>\n'
@@ -828,6 +891,7 @@ def build_free_cards():
     <li><b>Don’t correct, just listen</b><span>There is no right answer to mark. Move to the next colour when the first comes easily.</span></li>
   </ol>
   <p style="margin-top:28px;color:var(--ink-2);max-width:40em">These seven are a taster. The full system has a card pack for each belt, a workbook, a story series and the Thinking Progress Chart.</p>
+  <p style="margin-top:14px;color:var(--ink-2);max-width:40em">For Anti-Bullying Week there is a one-page set: <a href="anti-bullying-week/">three cards for notice, choose and act</a>.</p>
 </div>
 <section class="band no-print">
   <div class="wrap band-inner">
@@ -844,6 +908,46 @@ def build_free_cards():
     return page("free-cards", "Seven free thinking cards for children aged 7 to 13",
                 "Print seven free thinking cards, one from each belt of the Thinking Dojo. One question each, to ask at dinner or in the car.",
                 body, 1, "free-cards")
+
+def build_abw_cards():
+    deck = "".join(tcard(i) for i in (0, 2, 4))
+    body = """
+<section class="page-head no-print">
+  <div class="wrap">
+    <p class="crumbs"><a href="../">Free cards</a><span aria-hidden="true">/</span><span>Anti-Bullying Week</span></p>
+    <h1>Three thinking cards for Anti-Bullying Week.</h1>
+    <p class="lede no-print">Notice, choose, act. One question for each, to ask in class or at home during the week of 16 to 20 November 2026.</p>
+    <p class="no-print" style="margin-top:26px"><button class="btn btn-primary" type="button" onclick="window.print()">Print the cards</button></p>
+  </div>
+</section>
+<div class="wrap" style="padding-block:clamp(28px,4vw,48px)">
+  <div class="deck">{deck}</div>
+</div>
+<div class="wrap no-print" style="padding-bottom:clamp(48px,7vw,88px)">
+  <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:20px">How to use them</h2>
+  <ol class="steps">
+    <li><b>Early in the week: notice</b><span>Ask the White Belt card, then steer towards people. Who was on their own? Who went quiet?</span></li>
+    <li><b>Midweek: choose</b><span>Use a made-up situation. Ask the Orange Belt card about saying nothing, telling an adult and asking someone to join in.</span></li>
+    <li><b>End of the week: act</b><span>Ask the Blue Belt card. Telling an adult counts as a step, and it is often the hardest one.</span></li>
+  </ol>
+  <p style="margin-top:28px;color:var(--ink-2);max-width:40em">The full routine, with what to do if a child tells you something worrying, is in <a href="../../articles/three-questions-for-anti-bullying-week/">Three questions for Anti-Bullying Week</a>.</p>
+  <p style="margin-top:14px;color:var(--ink-3);font-size:15.5px;max-width:42em">Anti-Bullying Week is run by the Anti-Bullying Alliance, which publishes its own school resources at <a href="https://anti-bullyingalliance.org.uk/" rel="noopener">anti-bullyingalliance.org.uk</a>. The Thinking Dojo is not part of the campaign.</p>
+</div>
+<section class="band no-print">
+  <div class="wrap band-inner">
+    <div>
+      <h2>Seven cards, one from every belt.</h2>
+      <p>These three come from a free set of seven. Print the rest and keep going after the week.</p>
+    </div>
+    <div class="band-actions">
+      <a class="btn btn-light" href="../">Print all seven</a>
+      <a class="btn btn-ghost" href="../../articles/">Read the articles</a>
+    </div>
+  </div>
+</section>""".format(deck=deck)
+    return page("free-cards/anti-bullying-week", "Three free thinking cards for Anti-Bullying Week 2026",
+                "Print three free thinking cards for Anti-Bullying Week, 16 to 20 November 2026: notice, choose, act. One question each, for class or home.",
+                body, 2, "free-cards")
 
 
 # ---------------------------------------------------------------- privacy and terms
@@ -1022,9 +1126,18 @@ def patch_home():
     return True
 
 
+# Pages added or changed after the first publication date carry their own date here.
+LASTMOD = {
+    "articles/": "2026-11-16",
+    "articles/three-questions-for-anti-bullying-week/": "2026-11-16",
+    "free-cards/": "2026-11-16",
+    "free-cards/anti-bullying-week/": "2026-11-16",
+}
+
+
 def write_sitemap(urls):
     rows = ['  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n  </url>' % (BASE, PUBLISHED)]
-    rows += ['  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n  </url>' % (u, PUBLISHED) for u in urls]
+    rows += ['  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n  </url>' % (u, LASTMOD.get(u[len(BASE):], PUBLISHED)) for u in urls]
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "\n".join(rows) + "\n</urlset>\n")
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(xml)
@@ -1032,7 +1145,7 @@ def write_sitemap(urls):
 
 if __name__ == "__main__":
     urls = [build_hub()] + build_articles() + [build_questions(), build_teachers(), build_free_cards(),
-                                               build_privacy(), build_terms()]
+                                               build_abw_cards(), build_privacy(), build_terms()]
     build_feed()
     patched = patch_home()
     write_sitemap(urls)
