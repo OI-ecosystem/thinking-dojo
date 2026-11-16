@@ -337,6 +337,125 @@ ARTICLES = [
         "next": ["five-minute-thinking-starters-for-the-classroom", "what-to-ask-instead-of-how-was-school"],
     },
     {
+        "slug": "three-questions-for-childrens-mental-health-week",
+        "group": "teachers", "belt": 6,
+        "date": "2026-11-16", "date_human": "16 November 2026", "rss_date": "Mon, 16 Nov 2026 09:10:00 +0000",
+        "title": "Three questions for Children’s Mental Health Week: ask, wait, listen",
+        "desc": "Children’s Mental Health Week runs each February. Three questions that help adults step into a child’s world, for ages 7 to 13, with a printable card for each.",
+        "lede": "Children’s Mental Health Week runs each February. In 2027 it is 1 to 7 February, and the theme is Step into Our World. You can’t step into a child’s world by guessing what is in it. They have to show you, and a good question is how you ask.",
+        "body": """
+<h2>What the week is</h2>
+<p>Children’s Mental Health Week has been run by the charity Place2Be every February since 2015. The 2027 week runs from Monday 1 to Sunday 7 February.</p>
+<p>The 2027 theme, Step into Our World, asks adults to see things from children’s and young people’s point of view, and to be open and curious about what they find there.</p>
+<p>Place2Be publishes free resources for schools and families, and those come first. They are on <a href="https://www.childrensmentalhealthweek.org.uk/" rel="noopener">the Children’s Mental Health Week website</a>.</p>
+<p>The Thinking Dojo is not part of the campaign and is not a mental health programme. What follows is a short thinking routine that sits beside the week’s own materials.</p>
+
+<h2>Why a question helps</h2>
+<p>“How are you feeling?” is a hard question at any age. It asks for a summary of something a child may not have words for yet.</p>
+<p>A smaller question works better. It should be about something real, and it should have no right answer. That gives a child a way to show you a piece of their day, and the piece they choose tells you what matters to them.</p>
+
+<h2>First · what they noticed</h2>
+<span class="ask"><small>White Belt · Notice</small>What did you notice today?</span>
+<p>Anything counts. The supply teacher’s shoes, who sat alone at lunch, the hall smelling of paint. You are not looking for a particular answer. You are finding out what your child looks at.</p>
+
+<h2>Next · what others missed</h2>
+<span class="ask"><small>White Belt · Notice</small>What might others have missed?</span>
+<p>This is the question that fits the theme best. It invites a child to tell you something the adults haven’t seen.</p>
+<p>Take the answer seriously, even when it is about the lunch queue. A child who learns that small things are listened to is more likely to bring you a big one.</p>
+
+<h2>Then · what they think</h2>
+<span class="ask"><small>Black Belt · Independent</small>What do you think, and why?</span>
+<p>Ask it about something real in their world. A school rule. A falling-out between friends. Something they heard on the news.</p>
+<p>Then leave the answer alone. You don’t have to agree with it. You only have to show that you heard it.</p>
+
+<h2>Ask, wait, listen</h2>
+<ul>
+<li><strong>One question, one moment.</strong> The car, the dinner table or bedtime. Many children talk more easily side by side than face to face.</li>
+<li><strong>Ask, then wait.</strong> The silence is the thinking. If you fill it, you have done the thinking for them.</li>
+<li><strong>Don’t correct, just listen.</strong> Once you fix an answer, the task changes from thinking to guessing what you want to hear.</li>
+</ul>
+
+<h2>In the classroom</h2>
+<ol>
+<li>Put one question on the board.</li>
+<li>One minute of silent thinking.</li>
+<li>Two minutes in pairs.</li>
+<li>Two minutes hearing from three or four pupils.</li>
+</ol>
+<p>Nothing is written down and nothing is marked.</p>
+
+<h2>If you are worried about a child</h2>
+<p>These questions are for ordinary days. They are not a way to assess a child’s mental health.</p>
+<p>If a child says something that worries you, in school follow your safeguarding procedures and speak to your designated safeguarding lead. At home, talk to the school or your GP. If you think a child is in immediate danger, call 999.</p>
+
+<h2>Print the three cards</h2>
+<p>The three questions are on one page, ready to print and cut out: <a href="../../free-cards/childrens-mental-health-week/">three thinking cards for Children’s Mental Health Week</a>.</p>
+
+<h2>After the week</h2>
+<p>Listening works best as a habit. The same questions work on any ordinary Tuesday, and the first one is the place to start: <a href="../what-to-ask-instead-of-how-was-school/">what to ask instead of “How was school?”</a></p>
+""",
+        "next": ["what-to-ask-instead-of-how-was-school", "three-questions-for-anti-bullying-week"],
+    },
+    {
+        "slug": "three-questions-for-safer-internet-day",
+        "group": "teachers", "belt": 5,
+        "date": "2026-11-16", "date_human": "16 November 2026", "rss_date": "Mon, 16 Nov 2026 09:20:00 +0000",
+        "title": "Three questions for Safer Internet Day: notice, choose, review",
+        "desc": "Safer Internet Day is in February each year. Three five-minute questions that help children aged 7 to 13 reflect on their own screen time, with a printable card for each.",
+        "lede": "Safer Internet Day is in February each year. In 2027 it is Tuesday 9 February, and the UK theme asks children to reflect on tech. Reflecting is a thinking skill, and it can be practised with three questions.",
+        "body": """
+<h2>What the day is</h2>
+<p>Safer Internet Day is coordinated in the UK by the UK Safer Internet Centre. The 2027 day is Tuesday 9 February.</p>
+<p>The 2027 UK theme is “Reflect on tech: exploring digital well-being and our relationship with technology”. It covers healthy use, how technology affects mood, and how families and young people manage their time online.</p>
+<p>The Centre publishes free resources for schools and families, and those come first. They are on <a href="https://saferinternet.org.uk/" rel="noopener">the UK Safer Internet Centre website</a>.</p>
+<p>The Thinking Dojo is not part of the campaign and is not an online safety programme. What follows is a short thinking routine that sits beside the day’s own materials.</p>
+
+<h2>Why questions fit this theme</h2>
+<p>A rule about screens tells a child what to do. A question asks them to see for themselves what a screen does to their evening.</p>
+<p>Both have their place. But a child who has noticed something for themselves is more likely to act on it than a child who has only been told.</p>
+
+<h2>First · notice</h2>
+<span class="ask"><small>White Belt · Notice</small>What did you notice today?</span>
+<p>Ask it as it stands, then steer towards screens. How did you feel before you picked up the tablet? How did you feel when you put it down? What was happening in the room while you were on it?</p>
+<p>You are asking for a description, so there is nothing to tell off.</p>
+
+<h2>Next · choose</h2>
+<span class="ask"><small>Orange Belt · Choice</small>What might happen if you choose this?</span>
+<p>Use an ordinary evening. It is nearly bedtime and the next episode is about to start. Take three choices in turn and ask the question about each:</p>
+<ul>
+<li><strong>Watch one more.</strong></li>
+<li><strong>Stop now.</strong></li>
+<li><strong>Set a timer and stop when it goes.</strong></li>
+</ul>
+<p>Let them follow each one through to the next morning.</p>
+
+<h2>Then · review</h2>
+<span class="ask"><small>Brown Belt · Review</small>What would you do differently next time?</span>
+<p>Ask it about one evening this week. One is enough.</p>
+<p>Go first. Say what you would do differently about your own phone. Children copy what they hear, and it shows them the question isn’t a trap.</p>
+
+<h2>The five-minute routine</h2>
+<ol>
+<li>Put one question on the board.</li>
+<li>One minute of silent thinking.</li>
+<li>Two minutes in pairs.</li>
+<li>Two minutes hearing from three or four pupils.</li>
+</ol>
+<p>Nothing is written down and nothing is marked.</p>
+
+<h2>What this doesn’t cover</h2>
+<p>These questions are about a child’s own habits. They don’t cover privacy, reporting, or what to do about harmful content or contact. For those, use the UK Safer Internet Centre’s resources and your school’s online safety policy.</p>
+<p>If a child tells you about something online that has frightened or upset them, in school follow your safeguarding procedures and speak to your designated safeguarding lead.</p>
+
+<h2>Print the three cards</h2>
+<p>The three questions are on one page, ready to print and cut out: <a href="../../free-cards/safer-internet-day/">three thinking cards for Safer Internet Day</a>.</p>
+
+<h2>After the day</h2>
+<p>If your child likes the questions, there are ways to practise the same skills with no screen at all: <a href="../screen-free-thinking-activities-for-children/">screen-free thinking activities for children</a>.</p>
+""",
+        "next": ["screen-free-thinking-activities-for-children", "three-questions-for-anti-bullying-week"],
+    },
+    {
         "slug": "how-to-teach-your-child-to-think-for-themselves",
         "group": "parents", "belt": 6,
         "title": "How do I teach my child to think for themselves?",
@@ -891,7 +1010,7 @@ def build_free_cards():
     <li><b>Don’t correct, just listen</b><span>There is no right answer to mark. Move to the next colour when the first comes easily.</span></li>
   </ol>
   <p style="margin-top:28px;color:var(--ink-2);max-width:40em">These seven are a taster. The full system has a card pack for each belt, a workbook, a story series and the Thinking Progress Chart.</p>
-  <p style="margin-top:14px;color:var(--ink-2);max-width:40em">For Anti-Bullying Week there is a one-page set: <a href="anti-bullying-week/">three cards for notice, choose and act</a>.</p>
+  <p style="margin-top:14px;color:var(--ink-2);max-width:40em">One-page sets for dates in the school year: <a href="anti-bullying-week/">Anti-Bullying Week</a>, <a href="childrens-mental-health-week/">Children’s Mental Health Week</a> and <a href="safer-internet-day/">Safer Internet Day</a>.</p>
 </div>
 <section class="band no-print">
   <div class="wrap band-inner">
@@ -909,14 +1028,71 @@ def build_free_cards():
                 "Print seven free thinking cards, one from each belt of the Thinking Dojo. One question each, to ask at dinner or in the car.",
                 body, 1, "free-cards")
 
-def build_abw_cards():
-    deck = "".join(tcard(i) for i in (0, 2, 4))
-    body = """
+# One-page card sets for dates in the school year. The address of each never contains a year;
+# the dates and theme are refreshed here about six weeks before the event.
+EVENT_SHEETS = [
+    {
+        "path": "free-cards/anti-bullying-week", "crumb": "Anti-Bullying Week",
+        "cards": [(0, None), (2, None), (4, None)],
+        "h1": "Three thinking cards for Anti-Bullying Week.",
+        "lede": "Notice, choose, act. One question for each, to ask in class or at home during the week of 16 to 20 November 2026.",
+        "steps": [
+            ("Early in the week: notice", "Ask the White Belt card, then steer towards people. Who was on their own? Who went quiet?"),
+            ("Midweek: choose", "Use a made-up situation. Ask the Orange Belt card about saying nothing, telling an adult and asking someone to join in."),
+            ("End of the week: act", "Ask the Blue Belt card. Telling an adult counts as a step, and it is often the hardest one."),
+        ],
+        "more": 'The full routine, with what to do if a child tells you something worrying, is in <a href="../../articles/three-questions-for-anti-bullying-week/">Three questions for Anti-Bullying Week</a>.',
+        "note": 'Anti-Bullying Week is run by the Anti-Bullying Alliance, which publishes its own school resources at <a href="https://anti-bullyingalliance.org.uk/" rel="noopener">anti-bullyingalliance.org.uk</a>. The Thinking Dojo is not part of the campaign.',
+        "band_p": "These three come from a free set of seven. Print the rest and keep going after the week.",
+        "title": "Three free thinking cards for Anti-Bullying Week 2026",
+        "desc": "Print three free thinking cards for Anti-Bullying Week, 16 to 20 November 2026: notice, choose, act. One question each, for class or home.",
+    },
+    {
+        "path": "free-cards/childrens-mental-health-week", "crumb": "Children’s Mental Health Week",
+        "cards": [(0, None), (0, "What might others have missed?"), (6, None)],
+        "h1": "Three thinking cards for Children’s Mental Health Week.",
+        "lede": "Ask, wait, listen. Three questions that let a child show you their world, for class or home during the week of 1 to 7 February 2027.",
+        "steps": [
+            ("First: what they noticed", "Ask the first White Belt card. There is no wrong answer, and what a child chooses to mention tells you what matters to them."),
+            ("Next: what others missed", "Ask the second White Belt card. It invites a child to tell you something the adults have not seen."),
+            ("Then: what they think", "Ask the Black Belt card about something real in their world. Listen to the answer without arguing with it."),
+        ],
+        "more": 'The full routine, with what to do if you are worried about a child, is in <a href="../../articles/three-questions-for-childrens-mental-health-week/">Three questions for Children’s Mental Health Week</a>.',
+        "note": 'Children’s Mental Health Week is run by Place2Be, which publishes its own free resources at <a href="https://www.childrensmentalhealthweek.org.uk/" rel="noopener">childrensmentalhealthweek.org.uk</a>. The Thinking Dojo is not part of the campaign.',
+        "band_p": "Two of these come from a free set of seven. Print the rest and keep going after the week.",
+        "title": "Three free thinking cards for Children’s Mental Health Week",
+        "desc": "Print three free thinking cards for Children’s Mental Health Week, 1 to 7 February 2027. Three questions that help adults listen, for class or home.",
+    },
+    {
+        "path": "free-cards/safer-internet-day", "crumb": "Safer Internet Day",
+        "cards": [(0, None), (2, None), (5, None)],
+        "h1": "Three thinking cards for Safer Internet Day.",
+        "lede": "Notice, choose, review. One question for each, to help children reflect on their own screen time around Tuesday 9 February 2027.",
+        "steps": [
+            ("First: notice", "Ask the White Belt card, then steer towards screens. How did you feel before you picked it up, and after you put it down?"),
+            ("Next: choose", "Ask the Orange Belt card about one more episode, stopping now and setting a timer."),
+            ("Then: review", "Ask the Brown Belt card about one evening this week. Go first with an answer about your own phone."),
+        ],
+        "more": 'The full routine is in <a href="../../articles/three-questions-for-safer-internet-day/">Three questions for Safer Internet Day</a>.',
+        "note": 'Safer Internet Day is coordinated in the UK by the UK Safer Internet Centre, which publishes its own free resources at <a href="https://saferinternet.org.uk/" rel="noopener">saferinternet.org.uk</a>. The Thinking Dojo is not part of the campaign.',
+        "band_p": "These three come from a free set of seven. Print the rest and keep going after the day.",
+        "title": "Three free thinking cards for Safer Internet Day",
+        "desc": "Print three free thinking cards for Safer Internet Day, Tuesday 9 February 2027: notice, choose, review. One question each, for class or home.",
+    },
+]
+
+
+def build_event_sheets():
+    urls = []
+    for e in EVENT_SHEETS:
+        deck = "".join(tcard(i, q) for i, q in e["cards"])
+        steps = "".join("\n    <li><b>%s</b><span>%s</span></li>" % (t, d) for t, d in e["steps"])
+        body = """
 <section class="page-head no-print">
   <div class="wrap">
-    <p class="crumbs"><a href="../">Free cards</a><span aria-hidden="true">/</span><span>Anti-Bullying Week</span></p>
-    <h1>Three thinking cards for Anti-Bullying Week.</h1>
-    <p class="lede no-print">Notice, choose, act. One question for each, to ask in class or at home during the week of 16 to 20 November 2026.</p>
+    <p class="crumbs"><a href="../">Free cards</a><span aria-hidden="true">/</span><span>{crumb}</span></p>
+    <h1>{h1}</h1>
+    <p class="lede no-print">{lede}</p>
     <p class="no-print" style="margin-top:26px"><button class="btn btn-primary" type="button" onclick="window.print()">Print the cards</button></p>
   </div>
 </section>
@@ -925,29 +1101,26 @@ def build_abw_cards():
 </div>
 <div class="wrap no-print" style="padding-bottom:clamp(48px,7vw,88px)">
   <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:20px">How to use them</h2>
-  <ol class="steps">
-    <li><b>Early in the week: notice</b><span>Ask the White Belt card, then steer towards people. Who was on their own? Who went quiet?</span></li>
-    <li><b>Midweek: choose</b><span>Use a made-up situation. Ask the Orange Belt card about saying nothing, telling an adult and asking someone to join in.</span></li>
-    <li><b>End of the week: act</b><span>Ask the Blue Belt card. Telling an adult counts as a step, and it is often the hardest one.</span></li>
+  <ol class="steps">{steps}
   </ol>
-  <p style="margin-top:28px;color:var(--ink-2);max-width:40em">The full routine, with what to do if a child tells you something worrying, is in <a href="../../articles/three-questions-for-anti-bullying-week/">Three questions for Anti-Bullying Week</a>.</p>
-  <p style="margin-top:14px;color:var(--ink-3);font-size:15.5px;max-width:42em">Anti-Bullying Week is run by the Anti-Bullying Alliance, which publishes its own school resources at <a href="https://anti-bullyingalliance.org.uk/" rel="noopener">anti-bullyingalliance.org.uk</a>. The Thinking Dojo is not part of the campaign.</p>
+  <p style="margin-top:28px;color:var(--ink-2);max-width:40em">{more}</p>
+  <p style="margin-top:14px;color:var(--ink-3);font-size:15.5px;max-width:42em">{note}</p>
 </div>
 <section class="band no-print">
   <div class="wrap band-inner">
     <div>
       <h2>Seven cards, one from every belt.</h2>
-      <p>These three come from a free set of seven. Print the rest and keep going after the week.</p>
+      <p>{band_p}</p>
     </div>
     <div class="band-actions">
       <a class="btn btn-light" href="../">Print all seven</a>
       <a class="btn btn-ghost" href="../../articles/">Read the articles</a>
     </div>
   </div>
-</section>""".format(deck=deck)
-    return page("free-cards/anti-bullying-week", "Three free thinking cards for Anti-Bullying Week 2026",
-                "Print three free thinking cards for Anti-Bullying Week, 16 to 20 November 2026: notice, choose, act. One question each, for class or home.",
-                body, 2, "free-cards")
+</section>""".format(deck=deck, steps=steps, crumb=e["crumb"], h1=e["h1"], lede=e["lede"], more=e["more"],
+                    note=e["note"], band_p=e["band_p"])
+        urls.append(page(e["path"], e["title"], e["desc"], body, 2, "free-cards"))
+    return urls
 
 
 # ---------------------------------------------------------------- privacy and terms
@@ -1132,6 +1305,10 @@ LASTMOD = {
     "articles/three-questions-for-anti-bullying-week/": "2026-11-16",
     "free-cards/": "2026-11-16",
     "free-cards/anti-bullying-week/": "2026-11-16",
+    "articles/three-questions-for-childrens-mental-health-week/": "2026-11-16",
+    "articles/three-questions-for-safer-internet-day/": "2026-11-16",
+    "free-cards/childrens-mental-health-week/": "2026-11-16",
+    "free-cards/safer-internet-day/": "2026-11-16",
 }
 
 
@@ -1145,7 +1322,7 @@ def write_sitemap(urls):
 
 if __name__ == "__main__":
     urls = [build_hub()] + build_articles() + [build_questions(), build_teachers(), build_free_cards(),
-                                               build_abw_cards(), build_privacy(), build_terms()]
+                                               build_privacy(), build_terms()] + build_event_sheets()
     build_feed()
     patched = patch_home()
     write_sitemap(urls)
