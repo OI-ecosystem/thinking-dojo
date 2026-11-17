@@ -162,7 +162,7 @@ footer{padding-block:36px 44px;border-top:1px solid var(--line)}
 """
 
 FEED_LINK = '<link rel="alternate" type="application/rss+xml" title="The Thinking Dojo articles" href="%sarticles/feed.xml">\n' % BASE
-GOAT = ('<script>window.goatcounter = {path: function(p) { return "/thinking-dojo" + p }}</script>\n'
+GOAT = ('<script>window.goatcounter = {path: function(p) { return "/dojo" + p }}</script>\n'
         '<script data-goatcounter="https://signal333.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>')
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
